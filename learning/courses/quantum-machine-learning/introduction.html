@@ -14,7 +14,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.cf54faa5.css">
-<script src="/assets/js/runtime~main.adf07b45.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.a38a4cb7.js" defer="defer"></script>
 <script src="/assets/js/main.39141860.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -29,11 +29,11 @@
 <p>ก่อนเริ่มต้น กรุณากรอก<a href="https://your.feedback.ibm.com/jfe/form/SV_8wdBVMmnHcD5zg2" target="_blank" rel="noopener noreferrer" class="">แบบสำรวจก่อนคอร์ส</a> สั้นๆ นี้ ซึ่งสำคัญมากในการช่วยปรับปรุงเนื้อหาและประสบการณ์ ของผู้ใช้ของเรา</p>
 <p>ยินดีต้อนรับสู่ quantum machine learning!</p>
 <p>วิดีโอด้านล่างจะให้บทนำสั้นๆ ที่เสริมด้วยข้อความด้านล่าง</p>
-<div style="margin:1rem 0"><div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px"><iframe src="https://video.ibm.com/embed/recorded/134355930" title="ในวิดีโอนี้ Chris Porter ให้ภาพรวมของ subspace quantum diagonalization โดยอธิบายว่าปัจจัยใดมีอิทธิพลต่อประสิทธิภาพและความเป็นประโยชน์ และอธิบายว่าอะไรทำให้มันเร็วกว่าแนวทางอื่น ข้อความด้านล่างให้รายละเอียดเพิ่มเติม" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe></div></div>
+<!-- -->
 <p>เพื่อสรุปและเสริมวิดีโออย่างย่อ:</p>
 <ul>
 <li class="">เราได้เห็นปัญหาที่ได้รับการแก้ไขเป็นครั้งแรกบนคอมพิวเตอร์ควอนตัม จากนั้นผู้คนก็หาวิธีทำบน classical supercomputer ได้ วงจรของ classical และ quantum computing ที่ผลักดันกันไปจนถึงขีดจำกัดนี้น่าจะดำเนินต่อไปอีกสักสองสามปี</li>
-<li class="">มีปัญหาเฉพาะที่ quantum computing สามารถมีข้อได ้เปรียบที่พิสูจน์ได้เหนือ classical computing โดยขึ้นอยู่กับความก้าวหน้าในด้านต่างๆ เช่น การลดข้อผิดพลาดและจำนวน Qubit ที่มี แต่นี่ยังคงเป็นช่วงเวลาของการสำรวจ ค้นหาชุดข้อมูลที่เหมาะกับควอนตัมและ quantum feature maps ที่มีประโยชน์</li>
+<li class="">มีปัญหาเฉพาะที่ quantum computing สามารถมีข้อได้เปรียบที่พิสูจน์ได้เหนือ classical computing โดยขึ้นอยู่กับความก้าวหน้าในด้านต่างๆ เช่น การลดข้อผิดพลาดและจำนวน Qubit ที่มี แต่นี่ยังคงเป็นช่วงเวลาของการสำรวจ ค้นหาชุดข้อมูลที่เหมาะกับควอนตัมและ quantum feature maps ที่มีประโยชน์</li>
 <li class="">Quantum machine learning (QML) เป็นหนึ่งในหลายพื้นที่น่าตื่นเต้นที่ quantum computing สามารถเสริมหรือเติมเต็ม workflow แบบ classical ที่มีอยู่</li>
 </ul>
 <p>Machine learning (ML) ใช้อัลกอริทึมกับชุดข้อมูล ดังนั้น QML อาจรวม quantum mechanics ในด้านข้อมูลหรืออัลกอริทึม หรือทั้งสองอย่าง ความเป็นไปได้ทั้งหมดนี้อาจน่าสนใจ แต่เราส่วนใหญ่จะจำกัดตัวเองในการอภิปรายเกี่ยวกับ quantum algorithms ที่ใช้กับข้อมูล classical เหตุผลหนึ่งคือปัญหา ML ที่มีข้อมูล classical ได้รับการศึกษาและมีให้ใช้งานอย่างแพร่หลายแล้ว มีความสนใจอย่างกว้างขวางในการแก้ปัญหาที่เริ่มต้นด้วยข้อมูล classical อีกเหตุผลหนึ่งคือการขาด QRAM หากไม่มีความสามารถในการจัดเก็บข้อมูลควอนตัมจำนวนมากในระยะเวลาที่ยาวนานพอสมควร วิธีการที่เริ่มต้นด้วยข้อมูลควอนตัมยังค่อนข้างห่างไกลจากการใช้งานจริงในอุตสาหกรรม นอกจากนี้ยังไม่ชัดเจนว่าจะ &quot;เข้าถึงข้อมูล classical แบบ quantum&quot; ได้อย่างมีประสิทธิภาพอย่างไร ML สองประเภทที่น่าสนใจโดยเฉพาะคือ supervised learning ที่คุณฝึกอัลกอริทึมโดยใช้ชุดข้อมูลที่มีป้ายกำกับ และ unsupervised learning ที่อัลกอริทึมพยายามเรียนรู้เกี่ยวกับการกระจายตัวจากตัวอย่างที่ไม่มีป้ายกำกับ อัลกอริทึม unsupervised อาจเรียนรู้วิธีสร้างตัวอย่างใหม่จากการกระจายตัวเดิม หรือวิธีจัดกลุ่มตัวอย่างเป็นกลุ่มที่มีลักษณะคล้ายกัน</p>
