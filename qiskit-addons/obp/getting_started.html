@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.57812aa0.css">
-<script src="/assets/js/runtime~main.4c3097e7.js" defer="defer"></script>
-<script src="/assets/js/main.a4340a2d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.71f0b733.js" defer="defer"></script>
+<script src="/assets/js/main.7d3b5c0f.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -121,7 +121,7 @@ circuit = generate_time_evolution_circuit(
 circuit.draw(&quot;mpl&quot;, style=&quot;iqp&quot;, scale=0.6)
 ```
 
-![Quantum circuit diagram](./output_2.png)
+![Quantum circuit diagram](./_01_getting_started_imgs/output_2.png)
 
 ## Step 2: Optimize the problem
 ### Create circuit slices to backpropagate
@@ -191,7 +191,7 @@ Note that backpropagating one more slice would result in 27 terms across 12 grou
 The remaining circuit after backpropagation looks as follows:
 ```
 
-![Quantum circuit diagram](./output_3.png)
+![Quantum circuit diagram](./_01_getting_started_imgs/output_3.png)
 
 Next, we will specify the same problem with the same constraints on the size of the output observable. However, this time, we allot an error budget to each slice using the [setup_budet](https://qiskit.github.io/qiskit-addon-obp/stubs/qiskit_addon_obp.utils.truncating.setup_budget.html) function. Pauli terms with small coefficients will be truncated from each slice until the error budget is filled, and leftover budget will be added to the following slice&#x27;s budget.
 
@@ -238,7 +238,7 @@ Note that backpropagating one more slice would result in 27 terms across 13 grou
 The remaining circuit after backpropagation looks as follows:
 ```
 
-![Quantum circuit diagram](./output_4.png)
+![Quantum circuit diagram](./_01_getting_started_imgs/output_4.png)
 
 ### Now that we have our reduced ansatze and expanded observables, we can transpile our experiments to the backend.
 
