@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.507ab202.js" defer="defer"></script>
-<script src="/assets/js/main.14d9b997.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.db9a9c8f.js" defer="defer"></script>
+<script src="/assets/js/main.f3b5db4c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -182,11 +182,11 @@
 <p>อ่านเพิ่มเติมได้ที่<a href="https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts" target="_blank" rel="noopener noreferrer" class="">เอกสารจาก Python packaging authority เรื่อง conflict resolution</a></p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="pip-succeeds-but-prints-errors-after-running-pip-install-commands"><code>pip</code> สำเร็จแต่แสดงข้อผิดพลาดหลังรันคำสั่ง <code>pip install</code><a href="#pip-succeeds-but-prints-errors-after-running-pip-install-commands" class="hash-link" aria-label="ลิงก์ตรงไปยัง pip-succeeds-but-prints-errors-after-running-pip-install-commands" title="ลิงก์ตรงไปยัง pip-succeeds-but-prints-errors-after-running-pip-install-commands" translate="no">​</a></h3>
 <p>อาจเห็นข้อผิดพลาดใน output ของ <code>pip</code> เช่น:</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">ERROR: pip&#x27;s dependency resolver does not currently take into account all the packages that are installed. This behavior is the source of the following dependency conflicts.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">some-distribution 0.4.4 requires qiskit&gt;=0.44,&lt;1, but you have qiskit 1.0.0 which is incompatible.</span><br></span></code></pre></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">ERROR: pip&#x27;s dependency resolver does not currently take into account all the packages that are installed. This behavior is the source of the following dependency conflicts.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">some-distribution 0.4.4 requires qiskit&gt;=0.44,&lt;1, but you have qiskit v1.0.0 which is incompatible.</span><br></span></code></pre></div></div>
 <p>บรรทัดแรกมักจะเหมือนกันทุกครั้ง (ตั้งแต่ <code>pip</code> 23.3) แต่บรรทัดที่สองจะเปลี่ยนไปตามปัญหาที่เกิดขึ้น และอาจมีหลายบรรทัดแบบนี้
 <code>pip</code> น่าจะแจ้งว่าทำสิ่งที่ต้องการสำเร็จแล้ว แม้จะมีข้อความแสดงข้อผิดพลาด</p>
 <p>หมายความว่าสภาพแวดล้อมมีความขัดแย้งและไม่สามารถมั่นใจได้ว่าจะทำงานถูกต้อง
-ในการแก้ปัญหา ให้ตรวจสอบรายการข้อความจาก <code>pip</code> และพิจาร  ณาว่าจำเป็นต้องใช้แพ็กเกจทั้งหมดที่มีข้อกำหนดขัดแย้งหรือไม่
+ในการแก้ปัญหา ให้ตรวจสอบรายการข้อความจาก <code>pip</code> และพิจาร ณาว่าจำเป็นต้องใช้แพ็กเกจทั้งหมดที่มีข้อกำหนดขัดแย้งหรือไม่
 บางครั้งอาจมีความขัดแย้งจริงๆ ระหว่าง dependencies คุณอาจต้องใช้ virtual environment หลายตัวเพื่อแยก dependencies ที่มีข้อกำหนดที่เข้ากันไม่ได้</p>
 <p>ทางเลือกที่ปลอดภัยที่สุดคือเริ่ม virtual environment ใหม่ (หรือมากกว่าหนึ่งตัวถ้ามีความขัดแย้งจริงๆ) แล้วลบตัวที่ขัดแย้งทิ้ง</p>
 <p>เมื่อตั้งค่า virtual environment ให้รันคำสั่ง <code>pip install</code> เพียงครั้งเดียวที่รวม dependencies ทั้งหมดที่ต้องการ
