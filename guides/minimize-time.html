@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.2a0f1959.js" defer="defer"></script>
-<script src="/assets/js/main.0e299c02.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.9b21af03.js" defer="defer"></script>
+<script src="/assets/js/main.60466527.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -32,7 +32,7 @@
 <p>ตั้งค่าขีดจำกัดเวลา execution: คุณสามารถจำกัดระยะเวลาที่แต่ละ job, batch, หรือ session รัน ดูรายละเอียดที่ <a class="" href="/guides/max-execution-time">Maximum execution time for Qiskit Runtime workloads</a></p>
 </li>
 <li class="">
-<p>ใช้เฉพาะการตั้งค่าที่จำเป็นสำหรับการลดความผิดพลาดและการบรรเทาความผิดพลาด เพราะค่าที่สูงกว่าอาจทำให้ job รันนานขึ้น ดู <a class="" href="/guides/runtime-options-overview">Introduction to options</a>, <a class="" href="/guides/configure-error-suppression">Configure error suppression</a> และ <a class="" href="/guides/configure-error-mitigation">Configure error mitigation</a> สำหรับรายละเอียด</p>
+<p>ใช้เฉพาะการตั้งค่าที่จำเป็นสำหรับการลดความผิดพลาดและการบรรเทาความผิดพลาด เพราะค่าที่สูงกว่าอาจทำให้ job รันนานขึ้น ดู <a class="" href="/guides/runtime-options-overview">Introduction to options</a>, <a class="" href="/guides/error-mitigation-and-suppression-techniques">Configure error suppression</a> และ <a class="" href="/guides/error-mitigation-and-suppression-techniques">Configure error mitigation</a> สำหรับรายละเอียด</p>
 </li>
 <li class="">
 <p>ถ้าคุณกำลังรัน job หลายตัวที่มี circuit เดิม (มักเป็น parameterized) และใช้วิธี error mitigation ที่ต้องการ noise model เช่น PEA และ PEC ให้พิจารณาใช้ <code>NoiseLearner</code> ด้วย helper program นี้คุณสามารถเรียนรู้ noise model ของ Circuit ครั้งเดียวและนำ model กลับมาใช้ใน Estimator query ถัดไป โปรดทราบว่า noise model จะล้าสมัยหลังจากเวลาหนึ่ง ดังนั้นนี่จะใช้ได้จริงเฉพาะเมื่อไม่มีช่วงเวลาล่าช้านานระหว่าง job (เช่น ภายใน session) ดู <a class="" href="/guides/noise-learning">Noise learning helper
