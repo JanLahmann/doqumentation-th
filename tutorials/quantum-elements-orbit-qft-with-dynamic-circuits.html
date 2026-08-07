@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.fa8341e3.css">
-<script src="/assets/js/runtime~main.99c5115f.js" defer="defer"></script>
-<script src="/assets/js/main.8f0d778b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.58e12e3d.js" defer="defer"></script>
+<script src="/assets/js/main.fa23371d.js" defer="defer"></script>
 <meta data-dq-fallback-noindex name="robots" content="noindex, follow" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -27,8 +27,8 @@
 <!-- -->
 <!-- -->
 <!-- -->
-<p><em>Usage estimate:</em> 2 minutes on a Heron r3 processor. (NOTE: This is an estimate only. Your runtime might vary.) By default, this tutorial submits three Orbit function jobs into one Qiskit Runtime batch mode workload, with 300 PUBs per job, for 900 PUBs and 921,600 shots in total.</p>
-<p><em>Warning:</em> Dynamic circuits are presently an experimental feature, and they are subject to limitations in Qiskit Runtime <a href="#references" class="">[3]</a> that could cause job failures. For example, error 6073 indicates that a job exceeded the classical-control hardware&#x27;s memory limit <a href="#references" class="">[4]</a>. This notebook reduces that risk by partitioning circuit sizes across three Runtime jobs in one batch <a href="#references" class="">[5]</a>. Each fixed-size comparison remains in one job, while large and small sizes are paired to balance the jobs&#x27; classical-control workloads.</p>
+<p><em>Usage estimate:</em> 2 minutes on a Heron r3 processor. (NOTE: This is an estimate only. Your runtime might vary.) By default, this tutorial submits three Orbit function jobs into one IBM Quantum Compute Service batch mode workload, with 300 PUBs per job, for 900 PUBs and 921,600 shots in total.</p>
+<p><em>Warning:</em> Dynamic circuits are presently an experimental feature, and they are subject to limitations in Quantum Compute <a href="#references" class="">[3]</a> that could cause job failures. For example, error 6073 indicates that a job exceeded the classical-control hardware&#x27;s memory limit <a href="#references" class="">[4]</a>. This notebook reduces that risk by partitioning circuit sizes across three Quantum Compute jobs in one batch <a href="#references" class="">[5]</a>. Each fixed-size comparison remains in one job, while large and small sizes are paired to balance the jobs&#x27; classical-control workloads.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">Learning outcomes<a href="#learning-outcomes" class="hash-link" aria-label="ลิงก์ตรงไปยัง Learning outcomes" title="ลิงก์ตรงไปยัง Learning outcomes" translate="no">​</a></h2>
 <p>By completing this tutorial, you will learn how to:</p>
 <ul>
@@ -127,7 +127,7 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
 <p><a class="" href="/guides/functions">Introduction to Qiskit Functions</a></p>
 </li>
 <li class="">
-<p><a class="" href="/guides/stretch#qiskit-runtime-limitations">Qiskit Runtime limitations for stretch variables</a></p>
+<p><a class="" href="/guides/stretch#qiskit-runtime-limitations">Quantum Compute limitations for stretch variables</a></p>
 </li>
 <li class="">
 <p><a href="https://ibm.biz/error_codes#6073" target="_blank" rel="noopener noreferrer" class="">IBM Quantum error codes: 6073</a></p>
