@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.8adff1b1.js" defer="defer"></script>
-<script src="/assets/js/main.bb447231.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.3438ec6e.js" defer="defer"></script>
+<script src="/assets/js/main.9ddce374.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/guides/configure-qiskit-local" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/configure-qiskit-local" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -32,13 +32,30 @@
 <p>โดยค่าเริ่มต้น ไฟล์นี้อยู่ที่ <code>~/.qiskit/settings.conf</code> แต่สามารถเปลี่ยนเส้นทางได้ด้วย environment variable <code>QISKIT_SETTINGS</code></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="available-options">ตัวเลือกที่ใช้ได้<a href="#available-options" class="hash-link" aria-label="ลิงก์ตรงไปยัง ตัวเลือกที่ใช้ได้" title="ลิงก์ตรงไปยัง ตัวเลือกที่ใช้ได้" translate="no">​</a></h2>
 <ul>
-<li class=""><code>circuit_drawer</code>: เปลี่ยนระบบเริ่มต้นสำหรับตัววาด Circuit สามารถตั้งค่าเป็น <code>latex</code>, <code>mpl</code>, <code>text</code> หรือ <code>latex_source</code> เมื่อไม่ได้ตั้งค่า output kwarg อย่างชัดเจน ระบบตัววาดนี้จะถูกใช้</li>
-<li class=""><code>circuit_mpl_style</code>: สไตล์ชีตเริ่มต้นที่ใช้สำหรับระบบ mpl output ของตัววาด Circuit ค่าที่ถูกต้องคือ <code>default</code> หรือ <code>bw</code></li>
-<li class=""><code>circuit_mpl_style_path</code>: เส้นทางให้ตัววาด Circuit ค้นหา JSON style sheets เมื่อใช้โหมด mpl output</li>
-<li class=""><code>state_drawer</code>: ใช้เปลี่ยนระบบเริ่มต้นสำหรับเมธอด draw ของการแสดงผลสถานะ ค่าที่ถูกต้องคือ <code>repr</code>, <code>text</code>, <code>latex</code>, <code>latex_source</code>, <code>qsphere</code>, <code>hinton</code> หรือ <code>bloch</code> เมื่อไม่ได้ตั้งค่า output kwarg อย่างชัดเจนบนเมธอด <a class="" href="/api/qiskit/qiskit.quantum_info.DensityMatrix#densitymatrix">qiskit.quantum_info.DensityMatrix.draw</a> เมธอด output ที่ระบุจะถูกใช้</li>
-<li class=""><code>transpile_optimization_level</code>: เปลี่ยนระดับ optimization เริ่มต้นสำหรับ <a class="" href="/api/qiskit/compiler#transpile">qiskit.compiler.transpile</a> ระบุจำนวนเต็ม 0-3</li>
-<li class=""><code>parallel</code>: กำหนดว่าจะเปิด Python multiprocessing สำหรับการดำเนินการที่รองรับการทำงานแบบขนานหรือไม่ เช่น การ transpile ของ <a class="" href="/api/qiskit/qiskit.circuit.QuantumCircuit#quantumcircuit-class">qiskit.circuit.QuantumCircuit</a> หลายตัว การตั้งค่านี้สามารถแทนที่ได้ด้วย environment variable <code>QISKIT_PARALLEL</code> ระบุค่า boolean</li>
-<li class=""><code>num_processes</code>: จำนวนสูงสุดของกระบวนการขนานที่จะเปิดใช้สำหรับการดำเนินการแบบขนานหากเปิดใช้งาน parallel execution การตั้งค่านี้สามารถแทนที่ได้ด้วย environment variable <code>QISKIT_NUM_PROCS</code> ระบุจำนวนเต็มที่มากกว่า <code>0</code></li>
+<li class="">
+<p><code>circuit_drawer</code>: เปลี่ยนระบบเริ่มต้นสำหรับ circuit drawer สามารถตั้งเป็น <code>latex</code>, <code>mpl</code>, <code>text</code>, หรือ <code>latex_source</code> เมื่อไม่ได้ตั้งค่า kwarg ของ output อย่างชัดเจน ระบบวาดนี้จะถูกใช้</p>
+</li>
+<li class="">
+<p><code>circuit_mpl_style</code>: สไตล์ชีตเริ่มต้นที่ใช้สำหรับระบบเอาต์พุต mpl ของตัววาดวงจร ค่าที่ใช้ได้คือ <code>default</code> หรือ <code>bw</code></p>
+</li>
+<li class="">
+<p><code>circuit_mpl_style_path</code>: เส้นทางที่ตัววาดวงจรใช้ในการค้นหาสไตล์ชีต JSON เมื่อใช้โหมดเอาต์พุต mpl</p>
+</li>
+<li class="">
+<p><code>state_drawer</code>: ใช้เพื่อเปลี่ยนระบบเริ่มต้นสำหรับเมธอดวาดภาพการแสดงผลสถานะ ค่าที่ใช้ได้คือ <code>repr</code>, <code>text</code>, <code>latex</code>, <code>latex_source</code>, <code>qsphere</code>, <code>hinton</code>, หรือ <code>bloch</code> เมื่อไม่ได้ตั้งค่า kwarg output อย่างชัดเจนในเมธอด <a class="" href="/api/qiskit/qiskit.quantum_info.DensityMatrix#densitymatrix">qiskit.quantum_info.DensityMatrix.draw</a> จะใช้เมธอดเอาต์พุตที่ระบุนี้</p>
+</li>
+<li class="">
+<p><code>transpile_optimization_level</code>: เปลี่ยนระดับการปรับให้เหมาะสมเริ่มต้นสำหรับ <a class="" href="/api/qiskit/compiler#transpile">qiskit.compiler.transpile</a> ระบุจำนวนเต็ม 0-3</p>
+</li>
+<li class="">
+<p><code>parallel</code>: ระบุว่าเปิดใช้งาน Python multiprocessing สำหรับการทำงานที่รองรับการรันแบบขนานหรือไม่ ตัวอย่างเช่น การแปลง (transpilation) ของอ็อบเจ็กต์ <a class="" href="/api/qiskit/qiskit.circuit.QuantumCircuit#quantumcircuit-class">qiskit.circuit.QuantumCircuit</a> หลายตัว การตั้งค่านี้สามารถถูกแทนที่ได้ด้วยตัวแปรสภาพแวดล้อม <code>QISKIT_PARALLEL</code> ระบุค่าบูลีน</p>
+</li>
+<li class="">
+<p><code>num_processes</code>: จำนวนโปรเซสขนานสูงสุดที่จะเริ่มสำหรับการทำงานแบบขนานหากเปิดใช้งานการรันแบบขนาน การตั้งค่านี้สามารถถูกแทนที่ได้ด้วยตัวแปรสภาพแวดล้อม <code>QISKIT_NUM_PROCS</code> ระบุจำนวนเต็มที่มากกว่า <code>0</code></p>
+</li>
+<li class="">
+<p><code>min_qpy_version</code>: การโหลด QPY จะปฏิเสธไฟล์ที่มีเวอร์ชัน QPY ต่ำกว่าที่กำหนดไว้ที่นี่ ตัวเลือกนี้สามารถใช้เพื่อจำกัดเวอร์ชัน QPY ที่อนุญาตเมื่อพบปัญหาความปลอดภัยในการดีซีเรียลไลซ์ในเวอร์ชัน QPY ที่เก่ากว่า เพื่อป้องกันการโหลดเพย์โหลดที่อาจเป็นอันตราย</p>
+</li>
 </ul>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>หมายเหตุ</div><div class="admonitionContent_BuS1"><ul>
 <li class="">การตั้งค่าตัววาด Circuit ใช้กับ <a class="" href="/api/qiskit/qiskit.circuit.QuantumCircuit">qiskit.circuit.QuantumCircuit.draw</a> และ <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.visualization.circuit_drawer#qiskitvisualizationcircuit_drawer" target="_blank" rel="noopener noreferrer" class="">qiskit.visualization.circuit_drawer</a></li>
@@ -47,11 +64,21 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="environment-variables">Environment variables<a href="#environment-variables" class="hash-link" aria-label="ลิงก์ตรงไปยัง Environment variables" title="ลิงก์ตรงไปยัง Environment variables" translate="no">​</a></h2>
 <p>ตั้งค่า environment variables เหล่านี้เพื่อเปลี่ยนพฤติกรรมเริ่มต้นของ Qiskit:</p>
 <ul>
-<li class=""><code>QISKIT_PARALLEL</code>: เปิดใช้งาน Python multiprocessing เพื่อทำงานบางอย่างแบบขนาน เช่น การ transpile ของหลาย Circuit ใน Qiskit ระบุค่า boolean</li>
-<li class=""><code>QISKIT_NUM_PROCS</code>: จำนวนสูงสุดของกระบวนการขนานที่จะเปิดใช้สำหรับการดำเนินการแบบขนานหากเปิดใช้งาน parallel execution ระบุจำนวนเต็มที่มากกว่าศูนย์</li>
-<li class=""><code>RAYON_NUM_THREADS</code>: จำนวน thread สำหรับรันการดำเนินการแบบ multi-threaded ใน Qiskit โดยค่าเริ่มต้น โค้ด multi-threaded จะเปิด thread สำหรับแต่ละ logical CPU หากต้องการปรับจำนวน thread ที่ Qiskit ใช้ ให้ตั้งค่าเป็นจำนวนเต็ม เช่น การตั้งค่า RAYON_NUM_THREADS=4 จะเปิด 4 thread สำหรับฟังก์ชัน multi-threaded</li>
-<li class=""><code>QISKIT_FORCE_THREADS</code>: ระบุว่าโค้ด multi-threaded ควรทำงานหลาย thread เสมอ โดยค่าเริ่มต้น หากรันโค้ด multi-threaded ในส่วนของ Qiskit ที่กำลังรันในกระบวนการขนานอยู่แล้ว Qiskit จะไม่เปิดหลาย thread แต่จะรันฟังก์ชันนั้นแบบ serial แทน ทำเพื่อหลีกเลี่ยงการโอเวอร์โหลด CPU ที่มีจำกัด แต่ถ้าต้องการบังคับให้ใช้หลาย thread แม้อยู่ใน multiprocess context ให้ตั้งค่า <code>QISKIT_FORCE_THREADS=TRUE</code></li>
-<li class=""><code>QISKIT_SABRE_ALL_THREADS</code>: ควบคุมพฤติกรรมของ layout และ routing pass ใน preset pass manager ของ Qiskit เมื่อตั้งค่าเป็น <code>1</code> หรือ <code>TRUE</code> จะใช้ CPU ทั้งหมดที่มีในการรันการทดสอบแบบสุ่มหลายครั้ง ซึ่งสามารถปรับปรุงคุณภาพของผลลัพธ์ได้ โดยเฉพาะสำหรับระบบที่มี CPU/core มากกว่า 20 ตัว แต่ข้อแลกเปลี่ยนคือผลลัพธ์ไม่สามารถทำซ้ำได้เมื่อรันบนฮาร์ดแวร์ท้องถิ่นที่แตกต่างกัน</li>
+<li class="">
+<p><code>QISKIT_PARALLEL</code>: เปิดใช้งาน Python multiprocessing เพื่อทำงานบางอย่างแบบขนาน เช่น การ transpile ของหลาย Circuit ใน Qiskit ระบุค่า boolean</p>
+</li>
+<li class="">
+<p><code>QISKIT_NUM_PROCS</code>: จำนวนสูงสุดของกระบวนการขนานที่จะเปิดใช้สำหรับการดำเนินการแบบขนานหากเปิดใช้งาน parallel execution ระบุจำนวนเต็มที่มากกว่าศูนย์</p>
+</li>
+<li class="">
+<p><code>RAYON_NUM_THREADS</code>: จำนวน thread สำหรับรันการดำเนินการแบบ multi-threaded ใน Qiskit โดยค่าเริ่มต้น โค้ด multi-threaded จะเปิด thread สำหรับแต่ละ logical CPU หากต้องการปรับจำนวน thread ที่ Qiskit ใช้ ให้ตั้งค่าเป็นจำนวนเต็ม เช่น การตั้งค่า RAYON_NUM_THREADS=4 จะเปิด 4 thread สำหรับฟังก์ชัน multi-threaded</p>
+</li>
+<li class="">
+<p><code>QISKIT_FORCE_THREADS</code>: ระบุว่าโค้ด multi-threaded ควรทำงานหลาย thread เสมอ โดยค่าเริ่มต้น หากรันโค้ด multi-threaded ในส่วนของ Qiskit ที่กำลังรันในกระบวนการขนานอยู่แล้ว Qiskit จะไม่เปิดหลาย thread แต่จะรันฟังก์ชันนั้นแบบ serial แทน ทำเพื่อหลีกเลี่ยงการโอเวอร์โหลด CPU ที่มีจำกัด แต่ถ้าต้องการบังคับให้ใช้หลาย thread แม้อยู่ใน multiprocess context ให้ตั้งค่า <code>QISKIT_FORCE_THREADS=TRUE</code></p>
+</li>
+<li class="">
+<p><code>QISKIT_SABRE_ALL_THREADS</code>: ควบคุมพฤติกรรมของ layout และ routing pass ใน preset pass manager ของ Qiskit เมื่อตั้งค่าเป็น <code>1</code> หรือ <code>TRUE</code> จะใช้ CPU ทั้งหมดที่มีในการรันการทดสอบแบบสุ่มหลายครั้ง ซึ่งสามารถปรับปรุงคุณภาพของผลลัพธ์ได้ โดยเฉพาะสำหรับระบบที่มี CPU/core มากกว่า 20 ตัว แต่ข้อแลกเปลี่ยนคือผลลัพธ์ไม่สามารถทำซ้ำได้เมื่อรันบนฮาร์ดแวร์ท้องถิ่นที่แตกต่างกัน</p>
+</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="next-steps">ขั้นตอนถัดไป<a href="#next-steps" class="hash-link" aria-label="ลิงก์ตรงไปยัง ขั้นตอนถัดไป" title="ลิงก์ตรงไปยัง ขั้นตอนถัดไป" translate="no">​</a></h2>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>คำแนะนำ</div><div class="admonitionContent_BuS1"><ul>

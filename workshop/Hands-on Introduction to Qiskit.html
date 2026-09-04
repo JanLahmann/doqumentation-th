@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.8adff1b1.js" defer="defer"></script>
-<script src="/assets/js/main.bb447231.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.3438ec6e.js" defer="defer"></script>
+<script src="/assets/js/main.9ddce374.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/workshop/Hands-on Introduction to Qiskit" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/workshop/Hands-on Introduction to Qiskit" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -36,12 +36,24 @@
 <p>ในการรัน quantum circuits บน hardware จำเป็นต้องตั้งค่าบัญชีก่อน
 ทำได้ดังนี้:</p>
 <ol>
-<li class="">ไปที่ <a href="https://quantum.cloud.ibm.com/" target="_blank" rel="noopener noreferrer" class="">IBM Quantum® Platform เวอร์ชันใหม่</a></li>
-<li class="">ไปที่มุมขวาบน (ดูรูปด้านบน) สร้าง API token แล้วคัดลอกไปเก็บไว้ในที่ปลอดภัย</li>
-<li class="">ในเซลล์ถัดไป แทนที่ <code>deleteThisAndPasteYourAPIKeyHere</code> ด้วย API key ของตัวเอง</li>
-<li class="">ไปที่มุมซ้ายล่าง (ดูรูปด้านบน) แล้ว <strong>สร้าง instance</strong> โดยเลือก open plan</li>
-<li class="">หลังสร้าง instance แล้ว คัดลอก CRN code ที่เชื่อมกับ instance นั้น อาจต้องรีเฟรชเพื่อให้เห็น instance</li>
-<li class="">ในเซลล์ด้านล่าง แทนที่ <code>deleteThisAndPasteYourCRNHere</code> ด้วย CRN code</li>
+<li class="">
+<p>ไปที่ <a href="https://quantum.cloud.ibm.com/" target="_blank" rel="noopener noreferrer" class="">IBM Quantum® Platform เวอร์ชันใหม่</a></p>
+</li>
+<li class="">
+<p>ไปที่มุมขวาบน (ดูรูปด้านบน) สร้าง API token แล้วคัดลอกไปเก็บไว้ในที่ปลอดภัย</p>
+</li>
+<li class="">
+<p>ในเซลล์ถัดไป แทนที่ <code>deleteThisAndPasteYourAPIKeyHere</code> ด้วย API key ของตัวเอง</p>
+</li>
+<li class="">
+<p>ไปที่มุมซ้ายล่าง (ดูรูปด้านบน) แล้ว <strong>สร้าง instance</strong> โดยเลือก open plan</p>
+</li>
+<li class="">
+<p>หลังสร้าง instance แล้ว คัดลอก CRN code ที่เชื่อมกับ instance นั้น อาจต้องรีเฟรชเพื่อให้เห็น instance</p>
+</li>
+<li class="">
+<p>ในเซลล์ด้านล่าง แทนที่ <code>deleteThisAndPasteYourCRNHere</code> ด้วย CRN code</p>
+</li>
 </ol>
 <p>ดู <a href="https://quantum.cloud.ibm.com/docs/guides/cloud-setup" target="_blank" rel="noopener noreferrer" class="">คู่มือนี้</a> สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับการตั้งค่าบัญชี IBM Cloud®</p>
 <div class="alert alert-block alert-warning"><p>⚠️ <strong>หมายเหตุ:</strong> ดูแล API key เหมือนกับรหัสผ่านที่ต้องรักษาความปลอดภัย ดู <a href="https://quantum.cloud.ibm.com/docs/guides/cloud-setup#cloud-save" target="_blank" rel="noopener noreferrer" class="">คู่มือ Cloud setup</a> สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการใช้ API key ในสภาพแวดล้อมที่ปลอดภัยและไม่ปลอดภัย</p></div>
@@ -399,11 +411,21 @@ c-16-25.333-24-45-24-59z"></path></svg></span></span></span></span></span></span
 </ul>
 <p>แล้วมันทำงานอย่างไร? ขั้นตอนมีดังนี้</p>
 <ol>
-<li class=""><strong>เตรียมสถานะ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em">ψ</span><span class="mclose">⟩</span></span></span></span> ของ Alice บน <code>q</code>:</strong> เราจะสร้างสถานะเฉพาะอย่าง <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mo>+</mo><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|+\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord">+</span><span class="mclose">⟩</span></span></span></span> เพื่อใช้ในการตรวจสอบ</li>
-<li class=""><strong>สร้าง entanglement:</strong> สร้าง Bell pair ระหว่าง <code>a</code> และ <code>b</code></li>
-<li class=""><strong>การดำเนินการของ Alice:</strong> Alice ทำ &quot;Bell measurement&quot; บน Qubit สองตัวของเธอ (<code>q</code> และ <code>a</code>) และเก็บผลลัพธ์คลาสสิกไว้ใน <code>c0</code> และ <code>c1</code></li>
-<li class=""><strong>การสื่อสารแบบคลาสสิก:</strong> Alice ส่งบิตคลาสสิกสองบิต (<code>c0</code>, <code>c1</code>) ไปให้ Bob</li>
-<li class=""><strong>การแก้ไขของ Bob:</strong> Bob ใช้ Gate ควอนตัม (X และ/หรือ Z) กับ Qubit ของเขา (<code>b</code>) โดยขึ้นอยู่กับค่า <code>c0</code> และ <code>c1</code> ที่ได้รับ</li>
+<li class="">
+<p><strong>เตรียมสถานะ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em">ψ</span><span class="mclose">⟩</span></span></span></span> ของ Alice บน <code>q</code>:</strong> เราจะสร้างสถานะเฉพาะอย่าง <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mo>+</mo><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|+\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord">+</span><span class="mclose">⟩</span></span></span></span> เพื่อใช้ในการตรวจสอบ</p>
+</li>
+<li class="">
+<p><strong>สร้าง entanglement:</strong> สร้าง Bell pair ระหว่าง <code>a</code> และ <code>b</code></p>
+</li>
+<li class="">
+<p><strong>การดำเนินการของ Alice:</strong> Alice ทำ &quot;Bell measurement&quot; บน Qubit สองตัวของเธอ (<code>q</code> และ <code>a</code>) และเก็บผลลัพธ์คลาสสิกไว้ใน <code>c0</code> และ <code>c1</code></p>
+</li>
+<li class="">
+<p><strong>การสื่อสารแบบคลาสสิก:</strong> Alice ส่งบิตคลาสสิกสองบิต (<code>c0</code>, <code>c1</code>) ไปให้ Bob</p>
+</li>
+<li class="">
+<p><strong>การแก้ไขของ Bob:</strong> Bob ใช้ Gate ควอนตัม (X และ/หรือ Z) กับ Qubit ของเขา (<code>b</code>) โดยขึ้นอยู่กับค่า <code>c0</code> และ <code>c1</code> ที่ได้รับ</p>
+</li>
 </ol>
 <p>ถ้าทำถูกต้องทุกขั้นตอน Qubit <code>b</code> ของ Bob จะอยู่ในสถานะ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em"></span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03588em">ψ</span><span class="mclose">⟩</span></span></span></span> ซึ่งเป็นสถานะดั้งเดิมของ <code>q</code> ของ Alice!</p>
 <p>สำหรับคำอธิบายและการสำรวจ quantum teleportation เชิงลึกมากขึ้น รวมถึงการอธิบายทางคณิตศาสตร์ว่าทำไมโปรโตคอลนี้ถึงใช้งานได้ สามารถดูได้จากแหล่งเรียนรู้ IBM Quantum: <a href="https://quantum.cloud.ibm.com/learning/courses/basics-of-quantum-information/entanglement-in-action/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Quantum Teleportation</a> ซึ่งเป็นส่วนหนึ่งของคอร์ส <a href="https://quantum.cloud.ibm.com/learning/courses/basics-of-quantum-information" target="_blank" rel="noopener noreferrer" class="">Basics of Quantum Information</a></p>
