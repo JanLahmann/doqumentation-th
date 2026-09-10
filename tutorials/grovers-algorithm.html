@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.bd4e94ab.js" defer="defer"></script>
-<script src="/assets/js/main.8fee8112.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.613c117c.js" defer="defer"></script>
+<script src="/assets/js/main.903f2531.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/grovers-algorithm" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/grovers-algorithm" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,22 +29,22 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">ผลลัพธ์การเรียนรู้<a href="#learning-outcomes" class="hash-link" aria-label="ลิงก์ตรงไปยัง ผลลัพธ์การเรียนรู้" title="ลิงก์ตรงไปยัง ผลลัพธ์การเรียนรู้" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>How to construct Grover oracles that mark one or more computational basis states</p>
+<p>วิธีสร้าง Grover oracles ที่ทำเครื่องหมาย computational basis states หนึ่งรายการหรือมากกว่า</p>
 </li>
 <li class="">
-<p>How to use the <code>grover_operator()</code> function from the Qiskit circuit library</p>
+<p>วิธีใช้ฟังก์ชัน <code>grover_operator()</code> จาก Qiskit circuit library</p>
 </li>
 <li class="">
-<p>How to determine the optimal number of Grover iterations for a given problem</p>
+<p>วิธีกำหนดจำนวนรอบ Grover ที่เหมาะสมที่สุดสำหรับปัญหาที่กำหนด</p>
 </li>
 <li class="">
-<p>How to execute Grover&#x27;s algorithm using the IBM Quantum Sampler primitive</p>
+<p>วิธีรันอัลกอริทึมของ Grover ด้วย Qiskit Runtime Sampler primitive</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">ข้อกำหนดเบื้องต้น<a href="#prerequisites" class="hash-link" aria-label="ลิงก์ตรงไปยัง ข้อกำหนดเบื้องต้น" title="ลิงก์ตรงไปยัง ข้อกำหนดเบื้องต้น" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p><a class="" href="/learning/courses/fundamentals-of-quantum-algorithms/grover-algorithm/introduction">Fundamentals of quantum algorithms: Grover&#x27;s algorithm</a></p>
+<p><a class="" href="/learning/courses/fundamentals-of-quantum-algorithms/grover-algorithm/introduction">พื้นฐานของอัลกอริทึมควอนตัม: อัลกอริทึมของ Grover</a></p>
 </li>
 <li class="">
 <p><a class="" href="/learning/courses/basics-of-quantum-information">Basics of quantum information</a></p>

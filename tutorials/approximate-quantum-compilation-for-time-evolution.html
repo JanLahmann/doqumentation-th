@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.bd4e94ab.js" defer="defer"></script>
-<script src="/assets/js/main.8fee8112.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.613c117c.js" defer="defer"></script>
+<script src="/assets/js/main.903f2531.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/approximate-quantum-compilation-for-time-evolution" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,25 +29,25 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">ผลการเรียนรู้<a href="#learning-outcomes" class="hash-link" aria-label="ลิงก์ตรงไปยัง ผลการเรียนรู้" title="ลิงก์ตรงไปยัง ผลการเรียนรู้" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>How to use the AQC-Tensor Qiskit addon to compress deep Trotter circuits into shallow ansatz circuits</p>
+<p>วิธีใช้ AQC-Tensor Qiskit addon เพื่อบีบอัด Trotter circuit ที่ลึกให้เป็น ansatz circuit ที่ตื้นกว่า</p>
 </li>
 <li class="">
-<p>How to generate a parametrized ansatz from a Trotter circuit and optimize its parameters using tensor network (MPS) methods</p>
+<p>วิธีสร้าง parametrized ansatz จาก Trotter circuit และปรับแต่งพารามิเตอร์โดยใช้วิธี tensor network (MPS)</p>
 </li>
 <li class="">
-<p>How to evaluate the fidelity of a compressed circuit against the target evolution and run it on quantum hardware</p>
+<p>วิธีประเมิน fidelity ของวงจรที่บีบอัดแล้วเทียบกับ target evolution และรันบนฮาร์ดแวร์ควอนตัม</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">สิ่งที่ควรรู้ก่อน<a href="#prerequisites" class="hash-link" aria-label="ลิงก์ตรงไปยัง สิ่งที่ควรรู้ก่อน" title="ลิงก์ตรงไปยัง สิ่งที่ควรรู้ก่อน" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p><a class="" href="/learning/courses/basics-of-quantum-information">Basics of quantum circuits</a></p>
+<p><a class="" href="/learning/courses/basics-of-quantum-information">พื้นฐานของวงจรควอนตัม</a></p>
 </li>
 <li class="">
-<p><a class="" href="/learning/courses/utility-scale-quantum-computing/quantum-simulation">Hamiltonian simulation and Trotterization</a></p>
+<p><a class="" href="/learning/courses/utility-scale-quantum-computing/quantum-simulation">Hamiltonian simulation และ Trotterization</a></p>
 </li>
 <li class="">
-<p><a class="" href="/guides/primitives">Introduction to primitives</a></p>
+<p><a class="" href="/guides/primitives">บทนำสู่ primitives</a></p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">ภูมิหลัง<a href="#background" class="hash-link" aria-label="ลิงก์ตรงไปยัง ภูมิหลัง" title="ลิงก์ตรงไปยัง ภูมิหลัง" translate="no">​</a></h2>

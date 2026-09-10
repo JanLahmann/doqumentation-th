@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.bd4e94ab.js" defer="defer"></script>
-<script src="/assets/js/main.8fee8112.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.613c117c.js" defer="defer"></script>
+<script src="/assets/js/main.903f2531.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/long-range-entanglement" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/long-range-entanglement" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,25 +29,25 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">ผลการเรียนรู้<a href="#learning-outcomes" class="hash-link" aria-label="ลิงก์ตรงไปยัง ผลการเรียนรู้" title="ลิงก์ตรงไปยัง ผลการเรียนรู้" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>How to implement a long-range CNOT gate using dynamic circuits with mid-circuit measurements (MCMs) and classical feedforward;</p>
+<p>วิธีสร้าง CNOT gate ระยะไกลโดยใช้ dynamic circuits ด้วย mid-circuit measurements (MCMs) และ classical feedforward;</p>
 </li>
 <li class="">
-<p>How to implement the equivalent gate using a unitary SWAP-based approach;</p>
+<p>วิธีนำ Gate ที่เทียบเท่าไปใช้งานโดยใช้แนวทาง unitary SWAP-based;</p>
 </li>
 <li class="">
-<p>How to compare both approaches by measuring gate fidelity as a function of qubit distance.</p>
+<p>วิธีเปรียบเทียบทั้งสองแนวทางโดยวัด gate fidelity เป็นฟังก์ชันของระยะห่างระหว่าง Qubit</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">สิ่งที่ต้องรู้ก่อน<a href="#prerequisites" class="hash-link" aria-label="ลิงก์ตรงไปยัง สิ่งที่ต้องรู้ก่อน" title="ลิงก์ตรงไปยัง สิ่งที่ต้องรู้ก่อน" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p><a class="" href="/learning/courses/basics-of-quantum-information">Basic quantum computing concepts</a>, including Bell states, entanglement, and quantum gates;</p>
+<p><a class="" href="/learning/courses/basics-of-quantum-information">แนวคิดพื้นฐานของการคำนวณควอนตัม</a> ได้แก่ Bell states, entanglement, และ quantum gates;</p>
 </li>
 <li class="">
-<p>Familiarity with <a class="" href="/guides/classical-feedforward-and-control-flow">dynamic circuits</a> (mid-circuit measurements and classical feedforward);</p>
+<p>ความคุ้นเคยกับ <a class="" href="/guides/classical-feedforward-and-control-flow">dynamic circuits</a> (mid-circuit measurements และ classical feedforward);</p>
 </li>
 <li class="">
-<p>Basic knowledge of <a href="https://docs.quantum.ibm.com/guides" target="_blank" rel="noopener noreferrer" class="">Qiskit SDK</a> and <a class="" href="/guides/compute-services#qiskit-runtime">IBM Quantum® Compute Service</a>, and access to an <a class="" href="/guides/cloud-setup">IBM Quantum account</a>.</p>
+<p>ความรู้พื้นฐานเกี่ยวกับ <a href="https://docs.quantum.ibm.com/guides" target="_blank" rel="noopener noreferrer" class="">Qiskit SDK</a> และ <a class="" href="/guides/compute-services#qiskit-runtime">Qiskit Runtime</a> และการเข้าถึง <a class="" href="/guides/cloud-setup">IBM Quantum® account</a></p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">พื้นหลัง<a href="#background" class="hash-link" aria-label="ลิงก์ตรงไปยัง พื้นหลัง" title="ลิงก์ตรงไปยัง พื้นหลัง" translate="no">​</a></h2>
