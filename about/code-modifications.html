@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.cbbb824a.js" defer="defer"></script>
-<script src="/assets/js/main.791d691e.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ffe18af6.js" defer="defer"></script>
+<script src="/assets/js/main.9a367335.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/about/code-modifications" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -33,12 +33,12 @@ Engine</strong> จะได้รับสำเนาของ notebook ต้
 <p>เซลล์ blockquote จะถูกแทรกไว้ที่ด้านบนสุด เพื่ออธิบายว่า doQumentation
 ได้เพิ่มเซลล์ตั้งค่าอัตโนมัติ พร้อมลิงก์กลับมายังหน้านี้</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-prerequisites-cell-code">2. เซลล์ข้อกำหนดเบื้องต้น (code)<a href="#2-prerequisites-cell-code" class="hash-link" aria-label="ลิงก์ตรงไปยัง 2. เซลล์ข้อกำหนดเบื้องต้น (code)" title="ลิงก์ตรงไปยัง 2. เซลล์ข้อกำหนดเบื้องต้น (code)" translate="no">​</a></h3>
-<p>เซลล์โค้ดจะถูกแทรกหลังจากเซลล์แจ้งเตือน โดย:</p>
+<p>เซลล์โค้ดจะถูกแทรกต่อจากเซลล์แจ้งการตั้งค่า โดย:</p>
 <ul>
 <li class="">
 <p><strong>ติดตั้งแพ็กเกจที่จำเป็น</strong> (<code>qiskit</code>, <code>qiskit-aer</code>, <code>qiskit-ibm-runtime</code>,
 <code>pylatexenc</code> รวมถึงแพ็กเกจเฉพาะบทช่วยสอนที่ตรวจพบผ่านการสแกน import)
-การติดตั้งจะ <strong>ข้าม</strong> หากมีแพ็กเกจอยู่แล้ว
+การติดตั้งจะ <strong>ถูกข้าม</strong> หากมีแพ็กเกจอยู่แล้ว
 (เช่น บน Binder หรือ Code Engine ที่ติดตั้งไว้ล่วงหน้า)</p>
 </li>
 <li class="">

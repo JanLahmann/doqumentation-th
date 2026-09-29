@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.cbbb824a.js" defer="defer"></script>
-<script src="/assets/js/main.791d691e.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ffe18af6.js" defer="defer"></script>
+<script src="/assets/js/main.9a367335.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/considerations-set-up-runtime" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/considerations-set-up-runtime" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -64,7 +64,7 @@
 <p>ถ้าใช้ IDP อื่น Cloud administrator หรือ IDP administrator เป็นคนกำหนดผู้ใช้ให้กับ access groups?</p>
 </li>
 <li class="">
-<p>หากผู้ดูแลระบบ IDP กำหนดผู้ใช้ผ่าน dynamic rules คุณจะต้องมี custom IDP user attribute เพื่อใช้เป็นคีย์การจับคู่ (ตัวอย่างเช่น attribute <code>team</code>)</p>
+<p>หาก IDP administrator กำหนดผู้ใช้ผ่าน dynamic rules คุณจะต้องมี custom IDP user attribute เพื่อใช้เป็นคีย์การจับคู่ (ตัวอย่างเช่น attribute <code>team</code>)</p>
 </li>
 </ul>
 </li>
@@ -75,7 +75,7 @@
 <p>Workloads เป็นของ service instances และผู้ใช้ที่มีการเข้าถึง instance สามารถดู workloads ของ instance นั้นได้</p>
 </li>
 <li class="">
-<p>Service instances สามารถใช้แผนต่างกันได้ โดยอนุญาตให้เข้าถึง Backend ต่างกันและ allocations</p>
+<p>Service instances สามารถใช้แผนต่างกันได้ ทำให้เข้าถึง Backend และ allocation ที่ต่างกันได้</p>
 </li>
 </ul>
 </li>
@@ -89,7 +89,7 @@
 <p><strong>คุณจะใช้ access group ที่ถูกสร้างขึ้นโดยอัตโนมัติสำหรับแต่ละ instance สร้าง access group เพิ่มเติมของคุณเอง กำหนดการเข้าถึงให้กับผู้ใช้แต่ละคนโดยตรง หรือจัดระเบียบ instances เป็น resource groups?</strong></p>
 <ul>
 <li class="">
-<p><strong>Access groups</strong> เป็นวิธีที่สะดวกและใช้กันทั่วไปในการควบคุมการเข้าถึงของผู้ใช้ไปยังทรัพยากร IBM Cloud service instance ทุกตัวที่คุณสร้างผ่านส่วนติดต่อผู้ใช้ IBM Quantum Platform มี access group &quot;Collaborators&quot; ของตัวเองอยู่แล้ว คุณสามารถใช้ group นั้นตามที่เป็นอยู่ หรือสร้าง access group เพิ่มเติมใน IBM Cloud console เพื่อจัดกลุ่มผู้ใช้ตามทีมหรือ workload (ตัวอย่างเช่น <code>ml</code> และ <code>finance</code>) ข้าม instance หนึ่งตัวหรือมากกว่า access group แต่ละตัวใช้ custom role ที่อนุญาตให้ผู้ใช้เข้าถึง service instances หรือ resource groups เฉพาะ หากคุณไม่ต้องการให้กลุ่มผู้ใช้ใช้การเข้าถึงร่วมกัน คุณสามารถกำหนดการเข้าถึงให้กับผู้ใช้แต่ละคนโดยตรงได้เช่นกัน โดยไม่ต้องใช้ access group</p>
+<p><strong>Access groups</strong> เป็นวิธีที่สะดวกและใช้กันทั่วไปในการควบคุมการเข้าถึงของผู้ใช้ไปยังทรัพยากร IBM Cloud service instance ทุกตัวที่คุณสร้างผ่านส่วนติดต่อผู้ใช้ IBM Quantum Platform มี access group &quot;Collaborators&quot; ของตัวเองอยู่แล้ว คุณสามารถใช้ group นั้นตามที่เป็นอยู่ หรือสร้าง access group เพิ่มเติมใน IBM Cloud console เพื่อจัดกลุ่มผู้ใช้ตามทีมหรือ workload (ตัวอย่างเช่น <code>ml</code> และ <code>finance</code>) ครอบคลุม instance ตั้งแต่หนึ่งตัวขึ้นไป access group แต่ละตัวใช้ custom role ที่อนุญาตให้ผู้ใช้เข้าถึง service instances หรือ resource groups เฉพาะ หากคุณไม่ต้องการให้กลุ่มผู้ใช้ใช้การเข้าถึงร่วมกัน คุณสามารถกำหนดการเข้าถึงให้กับผู้ใช้แต่ละคนโดยตรงได้เช่นกัน โดยไม่ต้องใช้ access group</p>
 <ul>
 <li class="">หากคุณใช้ dynamic rules ที่อิงตาม IDP attributes เพื่อกำหนดผู้ใช้ให้กับ access groups หลีกเลี่ยงค่า attribute ที่เป็น substring ของกันและกัน ตัวอย่างเช่น หากคุณใช้ <code>ml</code> และ <code>chemlab</code> เป็นค่า attribute rule ที่จับคู่ <code>ml</code> จะจับคู่ <code>chemlab</code> ด้วย ทำให้เกิดการให้สิทธิ์การเข้าถึงมากกว่าที่คาดไว้โดยไม่ตั้งใจ ใช้ค่าที่ไม่ซ้ำกัน เช่น <code>ml</code> และ <code>chem-lab</code> หรือเพิ่ม prefix หรือ suffix เพื่อหลีกเลี่ยงการจับคู่ substring ที่ไม่ตั้งใจ</li>
 </ul>
@@ -110,7 +110,7 @@
 <p>สำหรับตัวอย่าง ดูที่ <a class="" href="/guides/custom-roles#custom">ตั้งค่า custom roles</a></p>
 <span id="shared-access"></span>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="shared-workload-access">การเข้าถึง workload ร่วมกัน<a href="#shared-workload-access" class="hash-link" aria-label="ลิงก์ตรงไปยัง การเข้าถึง workload ร่วมกัน" title="ลิงก์ตรงไปยัง การเข้าถึง workload ร่วมกัน" translate="no">​</a></h3>
-<p>การเข้าถึงมีผลกับ service instances ดังนั้นผู้ใช้ที่มีสิทธิ์เขียนใน instance (รวมถึงผ่าน access group &quot;Collaborators&quot; ที่ถูกสร้างขึ้นโดยอัตโนมัติสำหรับ instances ที่สร้างโดยส่วนติดต่อผู้ใช้ IBM Quantum Platform) สามารถยกเลิก workloads ของตนเองได้ แต่ยังสามารถดูและยกเลิก workloads ของผู้ใช้คนอื่นใน instance นั้นได้ด้วย นี่คือฟังก์ชันของวิธีที่ IAM ทำงานและไม่สามารถเปลี่ยนแปลงได้</p>
+<p>การเข้าถึงมีผลกับ service instances ดังนั้นผู้ใช้ที่มีสิทธิ์เขียนใน instance (รวมถึงผ่าน access group &quot;Collaborators&quot; ที่ถูกสร้างขึ้นโดยอัตโนมัติสำหรับ instances ที่สร้างโดยส่วนติดต่อผู้ใช้ IBM Quantum Platform) สามารถยกเลิก workloads ของตนเองได้ แต่ยังสามารถดูและยกเลิก workloads ของผู้ใช้คนอื่นใน instance นั้นได้ด้วย นี่เป็นผลจากกลไกการทำงานของ IAM และเปลี่ยนแปลงไม่ได้</p>
 <span id="nest-org"></span>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="simulate-hierarchical-structures">จำลองโครงสร้างแบบลำดับชั้น<a href="#simulate-hierarchical-structures" class="hash-link" aria-label="ลิงก์ตรงไปยัง จำลองโครงสร้างแบบลำดับชั้น" title="ลิงก์ตรงไปยัง จำลองโครงสร้างแบบลำดับชั้น" translate="no">​</a></h3>
 <p>โดยค่าเริ่มต้น การเข้าถึงของแต่ละ service instance จะถูกจัดการอย่างเป็นอิสระ ตัวอย่างเช่น ผ่าน access group &quot;Collaborators&quot; ที่ถูกสร้างขึ้นโดยอัตโนมัติสำหรับ instances ที่สร้างผ่านส่วนติดต่อผู้ใช้ IBM Quantum Platform IAM ไม่มีลำดับชั้นของ groups ในตัว แต่คุณสามารถจำลองได้โดยการสร้าง access groups ที่อ้างอิง service instances ของหลายทีม ผู้ใช้ที่ต้องการการเข้าถึงในวงกว้างเพียงแค่ต้องถูกเพิ่มเข้าไปใน group &quot;ระดับบนสุด&quot; หนึ่ง group แทนที่จะต้องเพิ่มเข้าไปใน access group ของแต่ละทีมแยกกัน</p>
