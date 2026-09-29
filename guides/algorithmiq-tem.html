@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.a6e72a5d.js" defer="defer"></script>
-<script src="/assets/js/main.9eb92452.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.cd888c2e.js" defer="defer"></script>
+<script src="/assets/js/main.182a391d.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/algorithmiq-tem" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -37,12 +37,12 @@ post-processing แบบ classical ด้วย TEM ผู้ใช้สาม
 (expectation values) ของ observable ได้โดยลดข้อผิดพลาดที่เกิดจาก noise
 อันหลีกเลี่ยงไม่ได้บนฮาร์ดแวร์ควอนตัม ด้วยความแม่นยำและประสิทธิภาพด้านต้นทุนที่เพิ่มขึ้น
 ทำให้เป็นตัวเลือกที่น่าสนใจอย่างมากสำหรับนักวิจัยด้านควอนตัมและผู้ปฏิบัติงานในอุตสาหกรรม</p>
-<p>วิธีการนี้ประกอบด้วยการสร้าง tensor network ที่แทนค่าผกผันของช่องทาง noise ส่วนกลาง
+<p>วิธีการนี้ประกอบด้วยการสร้าง tensor network ที่แทนค่าผกผันของ noise channel โดยรวมของทั้งระบบ
 ที่กระทบต่อสถานะของโปรเซสเซอร์ควอนตัม แล้วนำ map นั้นไปใช้กับผลการวัดที่ครอบคลุมข้อมูล
 อย่างสมบูรณ์ (informationally complete) ที่เก็บจากสถานะที่มี noise เพื่อให้ได้ตัวประมาณค่า
 แบบไม่เอนเอียง (unbiased estimators) สำหรับ observable</p>
-<p>ในฐานะข้อได้เปรียบ TEM ใช้ประโยชน์จากการวัดที่ครอบคลุมข้อมูลอย่างสมบูรณ์เพื่อเข้าถึง
-observable ที่ผ่านการลด noise จำนวนมาก และมี sampling overhead บนฮาร์ดแวร์ควอนตัม
+<p>ในฐานะข้อได้เปรียบ TEM ใช้ประโยชน์จากการวัดที่ครอบคลุมข้อมูลอย่างสมบูรณ์เพื่อให้ได้
+ค่าความคาดหวังของ observable จำนวนมากที่ผ่านการลด noise แล้ว และมี sampling overhead บนฮาร์ดแวร์ควอนตัม
 ที่เหมาะสมที่สุด ตามที่อธิบายใน Filippov et al. (2023),
 <a href="https://arxiv.org/abs/2307.11740" target="_blank" rel="noopener noreferrer" class="">arXiv:2307.11740</a> และ Filippov et al. (2024),
 <a href="https://arxiv.org/abs/2403.13542" target="_blank" rel="noopener noreferrer" class="">arXiv:2403.13542</a> overhead ของการวัดหมายถึงจำนวน
@@ -65,7 +65,7 @@ post-processing จึงไม่จำเป็นต้องเพิ่ม 
 TEM ประมาณค่า observable หลายตัวได้อย่างมีประสิทธิภาพจากข้อมูลการวัดชุดเดียวกัน
 จากคอมพิวเตอร์ควอนตัม</li>
 <li class=""><strong>การลด readout error</strong>: TEM Qiskit Function ยังมี
-<a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.033154" target="_blank" rel="noopener noreferrer" class="">วิธีการลด readout error แบบเฉพาะ</a>
+<a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.033154" target="_blank" rel="noopener noreferrer" class="">วิธีการลด readout error ที่ Algorithmiq พัฒนาขึ้นเอง</a>
 ที่สามารถลด readout error ได้อย่างมีนัยสำคัญหลังการ calibrate ในเวลาสั้น</li>
 <li class=""><strong>ความแม่นยำ</strong>: TEM ปรับปรุงความแม่นยำและความน่าเชื่อถือของการจำลองควอนตัม
 ดิจิทัลอย่างมีนัยสำคัญ ทำให้อัลกอริทึมควอนตัมมีความแม่นยำและน่าเชื่อถือมากขึ้น</li>
@@ -75,8 +75,7 @@ TEM ประมาณค่า observable หลายตัวได้อย�
 บน quantum Circuit ด้วย sampling overhead น้อยที่สุด Circuit จะถูกวัดด้วย
 informationally complete positive operator-valued measure (IC-POVM) และผลการวัด
 ที่เก็บได้จะถูกประมวลผลบนคอมพิวเตอร์ classical การวัดนี้ใช้ในการดำเนินการวิธี
-tensor network และสร้าง noise-inversion map ฟังก์ชันนำ map ที่กลับค่า noise ของ
-Circuit ทั้งหมดโดยใช้ tensor network เพื่อแทนชั้นที่มี noise</p>
+tensor network และสร้าง noise-inversion map ฟังก์ชันจะนำ map ที่กลับผลของ noise ใน Circuit ทั้งหมดได้อย่างสมบูรณ์ไปใช้ โดยใช้ tensor network แทนชั้นที่มี noise</p>
 <p><img decoding="async" loading="lazy" alt="TEM schematics" src="/assets/images/tem_scheme-3b0ce8de48d658c8be50eca1107670ae.svg" title="การประมาณ observable O ที่ผ่านการลด noise ผ่านการประมวลผลผลการวัดของโปรเซสเซอร์ควอนตัมที่มี noise U และ N แทนการดำเนินการควอนตัมในอุดมคติและ noise map ที่เกี่ยวข้อง ซึ่งโดยทั่วไปอาจไม่ใช่แบบ local (และขยายเป็นกล่องสีเทา) D แทน tensor ของตัวดำเนินการที่เป็น dual กับ effect ในการวัด IC โมดูลลด noise M คือ tensor network ที่ถูก contract อย่างมีประสิทธิภาพจากกลางออกไปสองด้าน การ contraction ครั้งแรกแสดงด้วยเส้นสีม่วงแบบจุด ครั้งที่สองด้วยเส้นประ และครั้งที่สามด้วยเส้นทึบ" width="985" height="562" class="img_ev3q"></p>
 <p>เมื่อ Circuit ถูกส่งไปยังฟังก์ชัน จะถูก transpile และ optimize เพื่อลดจำนวนชั้นที่มี
 two-qubit gate (gate ที่มี noise มากที่สุดบนอุปกรณ์ควอนตัม) Noise ที่กระทบต่อชั้นต่างๆ

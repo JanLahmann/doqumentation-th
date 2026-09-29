@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.a6e72a5d.js" defer="defer"></script>
-<script src="/assets/js/main.9eb92452.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.cd888c2e.js" defer="defer"></script>
+<script src="/assets/js/main.182a391d.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qasm-feature-table" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -38,10 +38,10 @@
 <p>✅ รองรับ</p>
 </li>
 </ul>
-<p>ความหมายของเครื่องหมาย &quot;รองรับ&quot; จะขึ้นอยู่กับคอลัมน์:</p>
+<p>ความหมายของเครื่องหมาย &quot;รองรับเต็มรูปแบบ&quot; จะขึ้นอยู่กับคอลัมน์:</p>
 <ul>
 <li class="">
-<p><em>Qiskit SDK</em>: ฟีเจอร์นี้สามารถ parse ได้ด้วย <a href="https://docs.quantum.ibm.com/api/qiskit/qasm3" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.qasm3.loads</code></a> (โดยใช้ extension <code>qiskit-qasm3-import</code>) แสดงผลใน <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit" target="_blank" rel="noopener noreferrer" class=""><code>QuantumCircuit</code></a>
+<p><em>Qiskit SDK</em>: ฟีเจอร์นี้สามารถ parse ได้ด้วย <a href="https://docs.quantum.ibm.com/api/qiskit/qasm3" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.qasm3.loads</code></a> (โดยใช้ extension <code>qiskit-qasm3-import</code>) แสดงใน <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit" target="_blank" rel="noopener noreferrer" class=""><code>QuantumCircuit</code></a>
 และ export เป็น OpenQASM 3 ด้วย <a href="https://docs.quantum.ibm.com/api/qiskit/qasm3#dumps" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.qasm3.dumps</code></a></p>
 </li>
 <li class="">
@@ -87,7 +87,7 @@ expressions อย่างจำกัดมาก โดยทั่วไป�
 <li class="">Qiskit SDK สามารถแสดง register aliasing สำหรับทั้ง quantum และ classical register
 แต่ไม่แนะนำให้ใช้ aliasing ของ classical register อย่างยิ่ง expression ส่วนมากบน
 classical register ไม่ทำงานกับ alias และ aliased classical register ไม่รองรับสำหรับ
-การรันบนฮาร์ดแวร์ Qiskit OpenQASM 3 parser สามารถแก้ไข <code>let</code> alias statement
+การรันบนฮาร์ดแวร์ Qiskit OpenQASM 3 parser สามารถ resolve (แปลความ) <code>let</code> alias statement
 ที่ผูกผลลัพธ์ของ register concatenation ได้</li>
 </ol>
 <span id="6"></span>
@@ -101,7 +101,7 @@ classical register ไม่ทำงานกับ alias และ aliased cla
 ไม่ถูกต้องสำหรับการรันบนฮาร์ดแวร์โดยตรง แต่กระบวนการ <code>transpile</code> จะแก้ไขให้กลายเป็น
 ISA circuit ที่ถูกต้อง Qiskit SDK (ณ กรกฎาคม 2025 ผ่าน <code>qiskit-qasm3-import</code>
 v0.6.0) จะประเมิน gate modifier แบบ eager ระหว่าง parse ดังนั้น modifier เหล่านี้จะ
-ไม่ปรากฏใน <code>QuantumCircuit</code> ที่ได้ ซึ่งอาจมีค่าใช้จ่าย runtime</li>
+ไม่ปรากฏใน <code>QuantumCircuit</code> ที่ได้ ซึ่งอาจทำให้ประสิทธิภาพตอน runtime ลดลง</li>
 </ol>
 <span id="8"></span>
 <ol start="8">
