@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.927e8beb.js" defer="defer"></script>
-<script src="/assets/js/main.1ef636c3.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.82ca7195.js" defer="defer"></script>
+<script src="/assets/js/main.469c5321.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-1.0-features" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-1.0-features" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -226,7 +226,7 @@ module ใหม่
 ยกเว้น class <code>UnitarySimulatorPy</code> และ <code>StatevectorSimulatorPy</code>
 ที่ถูกลบออกไปแล้ว เพราะฟังก์ชันการทำงานของทั้งสองถูกรวมไว้ใน
 module <a href="https://docs.quantum.ibm.com/api/qiskit/quantum_info" target="_blank" rel="noopener noreferrer" class=""><code>quantum_info</code></a> อยู่แล้ว</p>
-<p>การย้ายไปใช้ path ใหม่ทำได้ไม่ยาก ส่วนใหญ่สามารถแทนที่ class ใน
+<p>การย้ายไปใช้ path ใหม่ทำได้ไม่ยาก สามารถแทนที่ class ส่วนใหญ่ใน
 <code>qiskit.providers.basicaer</code> ด้วย class ที่เทียบเท่ากันใน
 <a href="https://docs.quantum.ibm.com/api/qiskit/providers_basic_provider" target="_blank" rel="noopener noreferrer" class=""><code>qiskit.providers.basic_provider</code></a>
 ได้เลย (drop-in replacement) โดยควรสังเกตว่า class เหล่านี้มี path
@@ -503,7 +503,7 @@ public interface ของโมดูล <code>qasm2</code> ไม่เหม�
 <span id="qiskit.test"></span>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="qiskittest">qiskit.test<a href="#qiskittest" class="hash-link" aria-label="ลิงก์ตรงไปยัง qiskit.test" title="ลิงก์ตรงไปยัง qiskit.test" translate="no">​</a></h2>
 <p>โมดูล <code>qiskit.test</code> ไม่ใช่ public module อีกต่อไปแล้ว โมดูลนี้ไม่เคยถูกออกแบบให้เป็น public
-หรือให้ใช้นอก Qiskit test suite ฟังก์ชันทั้งหมดเฉพาะเจาะจงกับ Qiskit และไม่มีทางเลือกแทน
+หรือให้ใช้นอก Qiskit test suite ฟังก์ชันทั้งหมดใช้เฉพาะกับ Qiskit เท่านั้น และไม่มีทางเลือกแทนให้
 ถ้าต้องการฟังก์ชันที่คล้ายกัน ให้รวมไว้ใน test harnesses ของตัวเองแทน</p>
 <span id="qiskit.tools"></span>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="qiskittools">qiskit.tools<a href="#qiskittools" class="hash-link" aria-label="ลิงก์ตรงไปยัง qiskit.tools" title="ลิงก์ตรงไปยัง qiskit.tools" translate="no">​</a></h2>

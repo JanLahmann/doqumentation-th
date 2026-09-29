@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.927e8beb.js" defer="defer"></script>
-<script src="/assets/js/main.1ef636c3.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.82ca7195.js" defer="defer"></script>
+<script src="/assets/js/main.469c5321.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/migrate-from-sampler-to-executor" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -60,7 +60,7 @@ Estimator ไปยัง Executor ยังอยู่ระหว่างก
 เจาะจงกลุ่มผู้ใช้ที่ต่างกัน:</p>
 <ul>
 <li class="">
-<p><strong>Sampler</strong> เป็นสิ่งที่เป็นนามธรรมระดับสูง มีลักษณะดังนี้:</p>
+<p><strong>Sampler</strong> เป็น abstraction ระดับสูง มีลักษณะดังนี้:</p>
 <ul>
 <li class="">
 <p>มีการระงับข้อผิดพลาดในตัว (dynamical decoupling และ twirling)</p>
@@ -79,13 +79,13 @@ Estimator ไปยัง Executor ยังอยู่ระหว่างก
 <ul>
 <li class="">
 <p>ไม่มีการระงับหรือบรรเทาข้อผิดพลาดในตัว แต่คุณจะระบุความตั้งใจในการออกแบบที่ฝั่ง client แทน (โดยใช้ circuit annotations และ <em>samplex</em>) และการสร้าง circuit
-variant ที่มีค่าใช้จ่ายสูงจะถูกย้ายไปทำที่ฝั่งเซิร์ฟเวอร์แทน</p>
+variant ซึ่งใช้การคำนวณสูงจะถูกย้ายไปทำที่ฝั่งเซิร์ฟเวอร์แทน</p>
 </li>
 <li class="">
 <p>ไม่มีการตัดสินใจโดยนัย มันทำตามคำสั่งของคุณอย่างเคร่งครัด ให้การควบคุมและความโปร่งใสอย่างเต็มที่</p>
 </li>
 <li class="">
-<p>Executor และ Samplomatic ร่วมกันเปิดเผยความสามารถเพิ่มเติมที่ Sampler ไม่มี ซึ่งรวมถึง (แต่ไม่จำกัดเพียง) สิ่งต่อไปนี้:</p>
+<p>Executor และ Samplomatic ร่วมกันมอบความสามารถเพิ่มเติมที่ Sampler ไม่มี ซึ่งรวมถึง (แต่ไม่จำกัดเพียง) สิ่งต่อไปนี้:</p>
 <ul>
 <li class="">กลุ่ม twirling เพิ่มเติม: Samplomatic ให้คุณเลือกกลุ่ม twirling ที่จะใช้
 ต่อ box แทนที่จะถูกจำกัดให้ใช้กลยุทธ์เดียวที่ Sampler ใช้ให้คุณ นอกจากนี้ยังรองรับกลุ่ม twirling อื่น ๆ นอกเหนือจาก Pauli เช่นกลุ่ม twirling <code>&quot;local_c1&quot;</code></li>
