@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.cd888c2e.js" defer="defer"></script>
-<script src="/assets/js/main.9ad30ba1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.9d9fafaf.js" defer="defer"></script>
+<script src="/assets/js/main.73dd98a4.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/migrate-from-sampler-to-executor" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -34,7 +34,7 @@ primitive ไปยัง Executor primitive</p>
 การทดลองระดับ utility-scale และต้องการการควบคุมที่ละเอียดและทำซ้ำได้เกี่ยวกับ
 เทคนิคต่าง ๆ เช่น Pauli twirling การเรียนรู้และการฉีด noise-model และการเปลี่ยน
 basis — หรือผู้ที่ต้องการความสามารถเพิ่มเติมที่ Executor มีให้</p>
-<p><strong>ใช้ Sampler ต่อไป</strong> หากคุณต้องการอินเทอร์เฟซระดับสูงที่เรียบง่าย และต้องการให้ primitive จัดการการปราบปราม (error suppression) และการบรรเทา (mitigation) ข้อผิดพลาดให้คุณ</p>
+<p><strong>ใช้ Sampler ต่อไป</strong> หากคุณต้องการอินเทอร์เฟซระดับสูงที่เรียบง่าย และต้องการให้ primitive จัดการการระงับ (error suppression) และการบรรเทา (mitigation) ข้อผิดพลาดให้คุณ</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="limitations-and-caveats">ข้อจำกัดและข้อควรระวัง<a href="#limitations-and-caveats" class="hash-link" aria-label="ลิงก์ตรงไปยัง ข้อจำกัดและข้อควรระวัง" title="ลิงก์ตรงไปยัง ข้อจำกัดและข้อควรระวัง" translate="no">​</a></h3>
 <p>เนื่องจาก Executor และ directed execution model อยู่ในสถานะ beta โปรดสังเกตสิ่งต่อไปนี้ก่อนที่คุณจะตัดสินใจย้าย:</p>
 <ul>
@@ -202,7 +202,7 @@ samplex (จาก <a class="" href="/guides/directed-execution-model#samplomati
 ฮาร์ดแวร์</p>
 <span id="sample-local"></span>
 <h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="verification-sample-the-template-circuit-locally">การตรวจสอบ: สุ่มตัวอย่าง template circuit ในเครื่อง<a href="#verification-sample-the-template-circuit-locally" class="hash-link" aria-label="ลิงก์ตรงไปยัง การตรวจสอบ: สุ่มตัวอย่าง template circuit ในเครื่อง" title="ลิงก์ตรงไปยัง การตรวจสอบ: สุ่มตัวอย่าง template circuit ในเครื่อง" translate="no">​</a></h5>
-<p>คุณสามารถดึงการสุ่มจาก samplex และผูกเข้ากับ template
+<p>คุณสามารถสุ่มชุดค่า (randomization) จาก samplex และผูกเข้ากับ template
 circuit เพื่อยืนยันว่า samplex กำลังสร้างค่าพารามิเตอร์ตามที่คุณคาดหวัง
 ค่าพารามิเตอร์ที่ <code>samplex.sample</code> คืนกลับมานั้นเข้ากันได้โดยตรงกับ
 พารามิเตอร์ของ template circuit</p>
