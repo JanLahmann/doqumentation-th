@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.ffe18af6.js" defer="defer"></script>
-<script src="/assets/js/main.9e28b8f1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.a6e72a5d.js" defer="defer"></script>
+<script src="/assets/js/main.868792b7.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-2.0" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-2.0" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -41,7 +41,7 @@ operations เหล่านี้โดยทั่วไปถูกเพิ
 วิธีที่ถูกต้องที่สุดในการทดสอบ condition คือใช้การตรวจสอบ <code>isinstance</code> เพื่อตรวจสอบว่าคุณมี class ที่ถูกต้อง
 หากต้องการรองรับ attribute <code>Instruction.condition</code> แบบ legacy ระหว่างการ transition ของ library ไปยัง Qiskit v2.0 และต่อไป คุณสามารถใช้ <code>getattr(operation, &quot;condition&quot;, None)</code> ซึ่งโดยทั่วไปจะทำให้ <code>Instruction</code> instances ทำงานเหมือนใน Qiskit v1.x และก่อนหน้า</p>
 <p>วิธีดั้งเดิมที่รองรับ simple register-equality conditions ใน Qiskit คือการใช้ method <code>c_if</code> บน individual instructions หรือ instruction sets
-วิธีนี้มีฟีเจอร์น้อยกว่า full control-flow form อย่างเห็นได้ชัด และไม่เคยได้รับการรองรับที่ดีบน hardware
+วิธีนี้ทำได้น้อยกว่า full control-flow form ในทุกด้าน และไม่เคยได้รับการรองรับที่ดีบน hardware
 วิธี legacy นี้ถูกลบออกใน Qiskit v2.0 ควรใช้ method <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.circuit.QuantumCircuit#qiskit.circuit.QuantumCircuit.if_test" target="_blank" rel="noopener noreferrer" class=""><code>if_test</code></a> พร้อม condition ที่เหมาะสม
 คุณยังใช้รูปแบบ 2-tuple ของ <code>(register, integer)</code> เพื่อแสดง register equality ได้ หรือใช้ <a href="https://docs.quantum.ibm.com/api/qiskit/circuit_classical" target="_blank" rel="noopener noreferrer" class="">classical computation subsystem</a> ที่มีฟีเจอร์มากกว่าเพื่อแสดง conditions ที่ซับซ้อนกว่า</p>
 <p>ตัวอย่างเช่น คุณอาจเขียนว่า:</p>
@@ -73,10 +73,10 @@ attributes เหล่านี้ไม่มีอีกต่อไปใน
 ฟังก์ชัน <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.generate_preset_pass_manager" target="_blank" rel="noopener noreferrer" class=""><code>generate_preset_pass_manager</code></a> และ
 <a href="https://docs.quantum.ibm.com/api/qiskit/compiler#transpile" target="_blank" rel="noopener noreferrer" class=""><code>transpile</code></a>) ที่ส่งผลต่อ
 การจัดการ loose constraint inputs เช่น <code>coupling_map</code> หรือ <code>basis_gates</code> จำนวน
-transpilation use cases ที่รับ loose constraints ได้ลดลงเพื่อสนับสนุน
-inputs <code>target</code> และ <code>backend</code> (ที่ <code>backend</code> คือ <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.providers.BackendV2" target="_blank" rel="noopener noreferrer" class=""><code>BackendV2</code></a> ที่
+transpilation use cases ที่รับ loose constraints ได้ถูกลดลง โดยให้ใช้
+inputs <code>target</code> และ <code>backend</code> แทน (ที่ <code>backend</code> คือ <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.providers.BackendV2" target="_blank" rel="noopener noreferrer" class=""><code>BackendV2</code></a> ที่
 ประกอบด้วย instance ของ <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.Target" target="_blank" rel="noopener noreferrer" class=""><code>Target</code></a>)
-ซึ่งช่วยให้สื่อสาร constraints เหล่านี้ได้มีฟีเจอร์มากขึ้น</p>
+ซึ่งสื่อ constraints เหล่านี้ได้ละเอียดกว่า</p>
 <p>ตัวอย่างต่อไปนี้แสดงการเปลี่ยนแปลงหลักและ alternatives ที่แนะนำสำหรับ migration หมายเหตุว่า migration tips ทั้งหมดด้านล่างนำไปใช้กับทั้ง <code>transpile</code> และ <code>generate_preset_pass_manager</code>:</p>
 <ol>
 <li class="">input argument <code>backend_properties</code> ไม่รองรับอีกต่อไป และ class <code>BackendProperties</code> ถูกลบออกแล้ว ควรใช้ arguments <code>target</code> หรือ <code>backend</code> แทนเพื่อสื่อสาร
@@ -97,7 +97,7 @@ arguments <code>target</code> หรือ <code>backend</code> แทน altern
 <li class="">
 <p>การระบุ <code>coupling_map</code> และ/หรือ <code>basis_gates</code> พร้อมกับ <code>backend</code> ไม่แนะนำ และตั้งแต่
 v2.0 จะมีการ raise <code>UserWarning</code> ในกรณีเหล่านี้มีแหล่งข้อมูลหลายแหล่ง
-และข้อมูลเช่น gate errors และ durations จาก backend ไม่สามารถแก้ไขได้โดยอิงข้อมูลที่ให้
+และข้อมูลเช่น gate errors และ durations จาก backend ไม่สามารถระบุหรือกระทบยอดให้ตรงกันได้จากข้อมูลที่ให้มา
 alternative ที่แนะนำคือนิยาม custom target ที่รวม constraints ที่เลือกไว้
 ตั้งแต่ต้น โดยใช้ <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.transpiler.Target#from_configuration" target="_blank" rel="noopener noreferrer" class=""><code>Target.from_configuration</code></a> หรือ <a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.providers.fake_provider.GenericBackendV2" target="_blank" rel="noopener noreferrer" class=""><code>GenericBackendV2</code></a></p>
 </li>
@@ -109,7 +109,7 @@ alternative ที่แนะนำคือนิยาม custom target ท�
 </li>
 <li class="">
 <p>combination input ที่ระบุ custom <code>coupling_map</code> พร้อมกับ <code>backend</code> หรือ <code>basis_gates</code>
-ที่ประกอบด้วย gates สามหรือมากกว่า qubits ไม่ได้รับอนุญาตอีกต่อไป coupling map
+ที่มี gates ซึ่งใช้ qubits ตั้งแต่สามตัวขึ้นไป ไม่ได้รับอนุญาตอีกต่อไป coupling map
 ไม่ให้รายละเอียด connectivity ที่จำเป็นเพื่อกำหนด action ของ gate
 ในกรณีเหล่านี้ migration path ที่แนะนำคือการสร้าง custom target ตั้งแต่ต้น</p>
 </li>

@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.ffe18af6.js" defer="defer"></script>
-<script src="/assets/js/main.9e28b8f1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.a6e72a5d.js" defer="defer"></script>
+<script src="/assets/js/main.868792b7.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/c-extension-for-python" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/c-extension-for-python" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -42,7 +42,7 @@ build process ของมัน และการเปิดเผยให�
 หากคุณเคยเขียน NumPy extension มาก่อน คุณจะพบว่ากระบวนการของ Qiskit
 คุ้นเคย</p></div></div>
 <div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>คำเตือน</div><div class="admonitionContent_BuS1"><p>Qiskit C API ยังอยู่ในระยะทดลอง ดังนั้นจึงยังไม่มี programming หรือ
-binary interface ที่เสถียรอย่างสมบูรณ์ และอาจมีการเปลี่ยนแปลงที่ทำให้เกิด breaking ระหว่าง minor version</p><p>ตัวอย่างเช่น extension module ที่ใช้ Qiskit v2.4.0 ในตอน build รับประกันว่าจะทำงานได้กับ
+binary interface ที่เสถียรอย่างสมบูรณ์ และอาจมี breaking change ระหว่าง minor version</p><p>ตัวอย่างเช่น extension module ที่ใช้ Qiskit v2.4.0 ในตอน build รับประกันว่าจะทำงานได้กับ
 Qiskit v2.4.1 ในตอน runtime แต่อาจ break เมื่อใช้ Qiskit v2.5.0 ในตอน runtime</p></div></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="requirements">ข้อกำหนด<a href="#requirements" class="hash-link" aria-label="ลิงก์ตรงไปยัง ข้อกำหนด" title="ลิงก์ตรงไปยัง ข้อกำหนด" translate="no">​</a></h2>
 <p>ทำตามคำแนะนำในหัวข้อ <a class="" href="/guides/install-c-api">Install</a> เพื่อติดตั้งสิ่งต่อไปนี้:</p>
@@ -56,7 +56,7 @@ Qiskit v2.4.1 ในตอน runtime แต่อาจ break เมื่อ�
 </ul>
 <p>คุณควรคุ้นเคยกับ หรือพร้อมที่จะค้นหา ฟังก์ชันและ object ที่มีอยู่
 ใน <a href="https://docs.quantum.ibm.com/api/qiskit-c" target="_blank" rel="noopener noreferrer" class="">Qiskit C API</a> และควรมีความคุ้นเคยกับการเขียนโปรแกรม C อยู่บ้าง</p>
-<p>เริ่มต้นจากไดเรกทอรีที่สะอาด</p>
+<p>เริ่มต้นจากไดเรกทอรีว่าง</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="create-the-directory-structure">สร้างโครงสร้างไดเรกทอรี<a href="#create-the-directory-structure" class="hash-link" aria-label="ลิงก์ตรงไปยัง สร้างโครงสร้างไดเรกทอรี" title="ลิงก์ตรงไปยัง สร้างโครงสร้างไดเรกทอรี" translate="no">​</a></h2>
 <p>เราจะใช้โครงสร้างไดเรกทอรีแบบ <code>src</code> และ build system แบบ <code>setuptools</code> อย่างง่าย  คำแนะนำ
 เหล่านี้ควรปรับเข้ากับ build system ใดก็ตามที่สามารถ build
@@ -186,7 +186,7 @@ keyword argument และฟังก์ชันที่ใช้ในกา
 ฟังก์ชันจะ propagate error</p>
 </li>
 <li class="">
-<p>มอบหมายให้ business logic แบบ C-native ของส่วนก่อนหน้า ซึ่ง mutate DAG ในตำแหน่งเดิม</p>
+<p>มอบหมายให้ business logic แบบ C-native ของส่วนก่อนหน้า ซึ่งแก้ไข DAG โดยตรง (in place)</p>
 </li>
 <li class="">
 <p>คืนค่า object <code>None</code> ฝั่ง Python</p>
@@ -200,7 +200,7 @@ CPython เกี่ยวกับการ parse argument</a> ซึ่งค�
 key <code>O&amp;</code> ใน format string ที่นี่ เราใช้ <code>qk_dag_convert_from_python</code> และ
 <code>qk_target_convert_from_python</code>  ฟังก์ชันเหล่านี้ <em>ยืม</em> C-native object จาก Python
 argument ที่พวกมันได้มา  หมายความว่าการ mutate จะ propagate ไปยัง Python space แต่ยังหมายความว่า
-คุณควรระวังไม่ปล่อย reference ของคุณไปยัง Python object ที่ค้ำพวกมันไว้ ขณะที่ใช้งาน
+คุณควรระวังไม่ปล่อย reference ไปยัง Python object ที่เป็นเจ้าของข้อมูลเบื้องหลังของมัน ขณะที่ใช้งาน
 ผลลัพธ์  นี่เป็นมาตรฐานสำหรับการเขียนโปรแกรม Python C API</p>
 <p>ต่อไป เรากำหนดข้อมูลเกี่ยวกับ module นี้และฟังก์ชันที่มันมี เพื่อให้เราสามารถส่งไปยัง
 Python space ได้:</p>

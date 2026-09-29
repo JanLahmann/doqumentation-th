@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.ffe18af6.js" defer="defer"></script>
-<script src="/assets/js/main.9e28b8f1.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.a6e72a5d.js" defer="defer"></script>
+<script src="/assets/js/main.868792b7.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/choose-execution-mode" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/choose-execution-mode" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -51,7 +51,7 @@
 <p><strong>Session</strong></p>
 <ul>
 <li class="">
-<p>ฟังก์ชันทั้งหมดจาก batch mode (แต่ต้องการการใช้งานที่มากขึ้น ดู <a class="" href="/guides/estimate-job-run-time#usage">Workload usage</a> สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับวิธีคำนวณการใช้งาน)</p>
+<p>ฟังก์ชันทั้งหมดจาก batch mode (แต่จะนับ usage มากขึ้น ดู <a class="" href="/guides/estimate-job-run-time#usage">Workload usage</a> สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับวิธีคำนวณการใช้งาน)</p>
 </li>
 <li class="">
 <p>สิทธิ์การเข้าถึง QPU แบบ dedicated และ exclusive ในช่วงเวลา active window ของ session</p>
@@ -99,7 +99,7 @@
 <p>มี fixed overhead ที่เกี่ยวข้องกับการรัน job โดยทั่วไป ถ้าแต่ละ job ของคุณใช้ <em>QPU time</em> น้อยกว่าหนึ่งนาที ให้พิจารณารวม jobs หลาย jobs เป็น job ขนาดใหญ่ขึ้น (ใช้กับ execution mode ทุกรูปแบบ) &quot;QPU time&quot; หมายถึงเวลาที่ QPU complex ใช้ในการประมวลผล job ของคุณ</p>
 </li>
 <li class="">
-<p>ถ้าแต่ละ job ของคุณใช้ QPU time มากกว่าหนึ่งนาที หรือถ้าการรวม jobs ไม่เหมาะสม คุณยังสามารถรัน jobs หลาย jobs แบบขนานกันได้ ทุก job ต้องผ่านทั้ง classical และ quantum processing ในขณะที่ QPU สามารถประมวลผลได้ทีละ job เท่านั้น classical jobs สูงสุดห้า jobs สามารถประมวลผลแบบขนานได้ คุณสามารถใช้ประโยชน์จากสิ่งนี้โดยการ submit jobs หลาย jobs ใน execution mode แบบ <a class="" href="/guides/run-jobs-batch#partition">batch</a> หรือ <a class="" href="/guides/run-jobs-session#two-vqe">session</a></p>
+<p>ถ้าแต่ละ job ของคุณใช้ QPU time มากกว่าหนึ่งนาที หรือถ้าการรวม job ไม่เหมาะสม คุณยังรันหลาย job แบบขนานกันได้ ทุก job ต้องผ่านทั้ง classical และ quantum processing ในขณะที่ QPU สามารถประมวลผลได้ทีละ job เท่านั้น classical job สูงสุดห้า job สามารถประมวลผลแบบขนานได้ คุณสามารถใช้ประโยชน์จากสิ่งนี้โดยการ submit หลาย job ใน execution mode แบบ <a class="" href="/guides/run-jobs-batch#partition">batch</a> หรือ <a class="" href="/guides/run-jobs-session#two-vqe">session</a></p>
 </li>
 </ul>
 <p>สิ่งข้างต้นเป็นแนวทางทั่วไป และคุณควรปรับ workload ของคุณเพื่อหาอัตราส่วนที่เหมาะสมที่สุด โดยเฉพาะเมื่อใช้ sessions ตัวอย่างเช่น ถ้าคุณใช้ session เพื่อสิทธิ์การเข้าถึง backend แบบ exclusive ลองพิจารณาแบ่ง jobs ขนาดใหญ่เป็น jobs ขนาดเล็กและรันแบบขนานกัน วิธีนี้อาจคุ้มค่ากว่าเนื่องจากสามารถลด wall-clock time ได้</p>
@@ -121,7 +121,7 @@
 </li>
 </ol>
 <p>ในกรณีนี้ ถ้าคุณใช้ job หรือ batch mode แต่ละ job ที่สร้างโดยขั้นตอน (2) ต้องกลับผ่าน queue ใหม่ สิ่งนี้ทำให้ความยาวของการทดลอง (wall-clock time) เพิ่มขึ้นอย่างมากเนื่องจากเวลา queuing นอกจากนี้ยังอาจใช้เวลานานกว่าในการ converge เนื่องจาก device drift กล่าวคือ ทุก iteration ควรให้ผลลัพธ์ที่ดีขึ้น แต่ device drift อาจทำให้ผลลัพธ์ต่อๆ มาแย่ลง</p>
-<p>นอกจากนี้ ถ้าคุณใช้ <a class="" href="/guides/error-mitigation-and-suppression-techniques#pea">PEA</a> หรือ <a class="" href="/guides/error-mitigation-and-suppression-techniques#pec">PEC</a> คุณสามารถ <a class="" href="/guides/noise-learning">เรียนรู้ noise model</a> ครั้งเดียวและใช้กับ jobs ต่อๆ มาเมื่อรันใน dedicated session สิ่งนี้มักไม่ทำงานกับ batch หรือ job mode เนื่องจาก noise model อาจล้าสมัยเมื่อ job ถัดไปออกจาก queue</p>
+<p>นอกจากนี้ ถ้าคุณใช้ <a class="" href="/guides/error-mitigation-and-suppression-techniques#pea">PEA</a> หรือ <a class="" href="/guides/error-mitigation-and-suppression-techniques#pec">PEC</a> คุณสามารถ <a class="" href="/guides/noise-learning">เรียนรู้ noise model</a> ครั้งเดียวและใช้กับ job ต่อๆ มาเมื่อรันใน dedicated session วิธีนี้มักใช้ไม่ได้กับโหมด batch หรือ job เนื่องจาก noise model อาจล้าสมัยเมื่อ job ถัดไปออกจาก queue</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="compare-error-mitigation-settings">เปรียบเทียบการตั้งค่า error mitigation<a href="#compare-error-mitigation-settings" class="hash-link" aria-label="ลิงก์ตรงไปยัง เปรียบเทียบการตั้งค่า error mitigation" title="ลิงก์ตรงไปยัง เปรียบเทียบการตั้งค่า error mitigation" translate="no">​</a></h3>
 <p>เพื่อเปรียบเทียบผลกระทบของวิธี error mitigation ที่มีอยู่ คุณอาจทำตาม flow นี้:</p>
 <ol>
