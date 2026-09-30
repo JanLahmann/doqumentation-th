@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.e07d7b11.js" defer="defer"></script>
-<script src="/assets/js/main.82f7817c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.7bf26125.js" defer="defer"></script>
+<script src="/assets/js/main.0eca54b3.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/learning/courses/quantum-computing-in-practice/introduction" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -45,8 +45,8 @@
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="simulating-nature">การจำลองธรรมชาติ<a href="#simulating-nature" class="hash-link" aria-label="ลิงก์ตรงไปยัง การจำลองธรรมชาติ" title="ลิงก์ตรงไปยัง การจำลองธรรมชาติ" translate="no">​</a></h3>
 <p>Classical simulator หมายถึงโปรแกรมคอมพิวเตอร์ที่ทำงานบนคอมพิวเตอร์คลาสสิกที่จำลองระบบทางกายภาพ สามารถทำนายเกี่ยวกับระบบกลศาสตร์ควอนตัมได้
 แต่ classical simulator ไม่ใช่ควอนตัมและไม่สามารถเลียนแบบระบบควอนตัมได้โดยตรง
-แทนที่พวกมันใช้การคำนวณทางคณิตศาสตร์เพื่อประมาณพฤติกรรมควอนตัม
-เมื่อขนาดของระบบที่ถูกจำลองเพิ่มขึ้น ค่าใช้จ่ายที่จำเป็นในการทำสิ่งนี้เพิ่มขึ้นอย่างมาก ทำให้มีข้อจำกัดว่าระบบควอนตัมใดที่สามารถจำลองได้ด้วยคลาสสิก การจำลองต้องใช้เวลานานแค่ไหน และความแม่นยำของผลลัพธ์</p>
+แต่จะใช้การคำนวณทางคณิตศาสตร์เพื่อประมาณพฤติกรรมควอนตัมแทน
+เมื่อขนาดของระบบที่ถูกจำลองเพิ่มขึ้น ทรัพยากรการคำนวณที่ต้องใช้ในการทำเช่นนี้ก็เพิ่มขึ้นอย่างมาก ทำให้มีข้อจำกัดว่าระบบควอนตัมใดที่สามารถจำลองได้ด้วยคลาสสิก การจำลองต้องใช้เวลานานแค่ไหน และความแม่นยำของผลลัพธ์</p>
 <p>คอมพิวเตอร์ควอนตัมในทางกลับกันสามารถเลียนแบบระบบควอนตัมได้โดยตรงมากขึ้น และด้วยเหตุนี้ค่าใช้จ่ายที่ต้องการจึงปรับขนาดได้ดีขึ้นอย่างมีนัยสำคัญเมื่อขนาดระบบเพิ่มขึ้น
 นี่คือแนวคิดของ Richard Feynman ในทศวรรษ 1980 ที่กระตุ้นการสืบสวนถึงศักยภาพของคอมพิวเตอร์ควอนตัมเป็นครั้งแรก
 เราจะพูดถึงเรื่องนี้เพิ่มเติมในภายหลัง!</p>
@@ -58,7 +58,7 @@
 โปรเซสเซอร์ขนาดเล็กเหล่านั้นสามารถจำลองได้ง่ายด้วยคลาสสิก
 ดังนั้น แม้ว่าพวกมันจะเป็นก้าวหินที่สาธารณะเข้าถึงได้ในเทคโนโลยีที่กำลังพัฒนา แต่พวกมันไม่สามารถแสดง quantum utility ได้: ทุกสิ่งที่ทำได้ด้วยพวกมันสามารถทำได้ง่ายพอ ๆ กันด้วยการจำลองคลาสสิก</p>
 <p>แต่ที่ประมาณ 100 Qubit สถานการณ์นี้ไม่เป็นเช่นนั้นอีกต่อไป โดยทั่วไปแล้ว โปรเซสเซอร์ควอนตัมขนาดนี้ไม่สามารถจำลองได้ด้วยคลาสสิกอีกต่อไป
-นี่ถือเป็นการเปลี่ยนผ่านในแบบหนึ่ง สู่ยุคใหม่ของเทคโนโลยีการประมวลผลควอนตัมที่ <em>ศักยภาพ</em> ในการมีประสิทธิภาพดีกว่าการประมวลผลคลาสสิกมีอยู่
+นี่ถือเป็นการเปลี่ยนผ่านในแบบหนึ่ง สู่ยุคใหม่ของเทคโนโลยีการประมวลผลควอนตัมที่มี <em>ศักยภาพ</em> จะทำได้ดีกว่าการประมวลผลคลาสสิก
 นี่คือสิ่งที่ IBM เลือกที่จะมุ่งเน้น เพื่อมองหาพลังการประมวลผลควอนตัมและไปสู่ quantum advantage ในที่สุด</p>
 <p>เราสนับสนุนให้ผู้ใช้ของเราใช้อุปกรณ์ใหม่เหล่านี้อย่างเต็มศักยภาพ ทดลองกับพวกมันและผลักดันขีดจำกัดของพวกมัน และนำบทเรียนที่ได้รับไปสู่โปรเซสเซอร์ควอนตัมรุ่นถัดไปที่กำลังพัฒนาอยู่
 จุดประสงค์ของคอร์สนี้คือการให้คุณทำสิ่งนี้ได้!</p>
@@ -104,7 +104,7 @@
 ในปัจจุบัน แทบไม่มีห้องปฏิบัติการฟิสิกส์ในโลกที่ไม่มีคอมพิวเตอร์</p>
 <p>โดยทั่วไป ฟิสิกส์และการประมวลผลเชื่อมโยงกันเสมอมา
 การประมวลผลไม่สามารถมีอยู่ในสุญญากาศ: ข้อมูลต้องการสื่อกลาง และเพื่อประมวลผล เราต้องใช้ประโยชน์จากโลกทางกายภาพในทางใดทางหนึ่ง
-Rolf Launduer นักวิทยาการคอมพิวเตอร์ (และพนักงาน IBM) ตระหนักเมื่อหลายทศวรรษก่อนว่าข้อมูลเป็นทางกายภาพ มีอยู่เฉพาะผ่านการแสดงทางกายภาพ
+Rolf Launduer นักวิทยาการคอมพิวเตอร์ (และพนักงาน IBM) ตระหนักเมื่อหลายทศวรรษก่อนว่าข้อมูลเป็นทางกายภาพ ซึ่งดำรงอยู่ได้ผ่านการแทนในรูปแบบทางกายภาพเท่านั้น
 <em>หลักการของ Landauer</em> สร้างการเชื่อมต่อระหว่างข้อมูลและกฎของอุณหพลศาสตร์ แต่ในความเป็นจริงมีการเชื่อมต่อมากมาย</p>
 <p>การทำความเข้าใจโลกทางกายภาพเป็นจุดมุ่งหมายของฟิสิกส์ในฐานะสาขาวิชา แต่จริง ๆ แล้วมันเป็นถนนสองทาง
 ผ่านความเข้าใจของโลกทางกายภาพ เราสามารถใช้เทคโนโลยีใหม่เพื่อช่วยเราในการประมวลผล และผ่านพวกมันเรายังคงเรียนรู้เกี่ยวกับโลกทางกายภาพ ดึงฟิสิกส์และเทคโนโลยีการประมวลผลขึ้นมาด้วยตัวเอง</p>
@@ -135,7 +135,7 @@ Rolf Launduer นักวิทยาการคอมพิวเตอร์
 คอมพิวเตอร์คลาสสิกในทางกลับกันสามารถประมาณเท่านั้นว่าสิ่งที่เกิดขึ้นจริงในธรรมชาติ และในบางกรณีการประมาณเหล่านั้นมีข้อจำกัดมาก</p>
 <p>วิธีหนึ่งในการคิดเกี่ยวกับเรื่องนี้คือผ่านการเปรียบเทียบกับอุโมงค์ลม
 ไดนามิกของไหลยากมากในการจำลองและทำนายทางคณิตศาสตร์
-ตัวอย่างเช่น มีค่าใช้จ่ายสูงและไม่ปฏิบัติในการจำลองรถยนต์ขับผ่านลม ดังนั้น ผู้ผลิตรถยนต์จึงสร้างอุโมงค์ที่มีลมพัดจริง ๆ และขับรถผ่านพวกมันเพื่อทดสอบประสิทธิภาพ
+ตัวอย่างเช่น การจำลองรถยนต์ที่แล่นฝ่าลมนั้นมีต้นทุนสูงเกินไปและทำได้ยากในทางปฏิบัติ ดังนั้น ผู้ผลิตรถยนต์จึงสร้างอุโมงค์ที่มีลมพัดจริง ๆ และขับรถผ่านพวกมันเพื่อทดสอบประสิทธิภาพ
 กล่าวคือ พวกเขาสร้างลมแทนที่จะจำลองมัน
 การสร้างคอมพิวเตอร์ควอนตัมเพื่อศึกษาโลกทางกายภาพเหมือนกับการสร้างอุโมงค์ลมเพื่อศึกษาว่าลมส่งผลต่อรถอย่างไร
 คอมพิวเตอร์ควอนตัมสามารถเลียนแบบกฎของธรรมชาติในระดับโมเลกุลโดยตรงเพราะพวกมันทำงานตามกฎเหล่านั้น
@@ -203,8 +203,8 @@ Gate ที่ทำงานบน Qubit เดียวไม่เสี่�
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion">บทสรุป<a href="#conclusion" class="hash-link" aria-label="ลิงก์ตรงไปยัง บทสรุป" title="ลิงก์ตรงไปยัง บทสรุป" translate="no">​</a></h2>
 <p>มันเป็นช่วงเวลาที่น่าตื่นเต้นมากในการทำงานในสาขาการประมวลผลควอนตัม: เป็นครั้งแรกในประวัติศาสตร์ที่เราสามารถเริ่มสำรวจพื้นที่ของการประมวลผลที่อยู่เกินการประมวลผลคลาสสิก</p>
-<p>T.J. Watson เคยทำนายอย่างมีชื่อเสียงว่าตลาดโลกมีสำหรับคอมพิวเตอร์เพียงไม่กี่เครื่อง
-เราอาจหัวเราะในตอนนี้ที่เขาผิดมากแค่ไหน แต่เมื่อเราทำสิ่งนี้เราต้องตระหนักว่าเราได้ประโยชน์จากการมองย้อนหลัง
+<p>T.J. Watson เคยทำนายไว้อย่างโด่งดังว่าตลาดโลกต้องการคอมพิวเตอร์เพียงไม่กี่เครื่องเท่านั้น
+เราอาจหัวเราะในตอนนี้ที่เขาผิดมากแค่ไหน แต่ขณะที่หัวเราะ เราต้องตระหนักว่าเราได้ประโยชน์จากการมองย้อนหลัง
 และเราควรยอมรับด้วยว่าในฐานะมนุษย์ เรามีแนวโน้มทั่วไปในการประมาณศักยภาพของเทคโนโลยีในอนาคตต่ำเกินไปอย่างมาก
 ตอนนี้ที่เป็นทีของเราและเรารับบทเป็นผู้บุกเบิกยุคแรกของการประมวลผลควอนตัม เราควรคำนึงถึงสิ่งนี้</p>
 <p>การประมวลผลควอนตัมมักถูกเปรียบเทียบกับการประมวลผลคลาสสิก เหมือนเป็นสิ่งที่แตกต่างและแข่งขันกัน

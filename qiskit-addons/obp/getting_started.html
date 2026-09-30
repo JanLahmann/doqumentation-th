@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.e07d7b11.js" defer="defer"></script>
-<script src="/assets/js/main.82f7817c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.7bf26125.js" defer="defer"></script>
+<script src="/assets/js/main.0eca54b3.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/qiskit-addons/obp/getting_started" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/qiskit-addons/obp/getting_started" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -203,7 +203,7 @@ The remaining circuit after backpropagation looks as follows:
 
 ![Quantum circuit diagram](/img/qiskit-addons/obp/01-getting-started/output_3.png)
 
-ถัดมา เราจะกำหนด problem เดิมพร้อมข้อจำกัดขนาด output observable เหมือนเดิม แต่คราวนี้เราจะจัดสรร error budget ให้แต่ละ slice โดยใช้ฟังก์ชัน [setup_budet](https://qiskit.github.io/qiskit-addon-obp/stubs/qiskit_addon_obp.utils.truncating.setup_budget.html) Pauli term ที่มีสัมประสิทธิ์เล็กน้อยจะถูกตัดออกจากแต่ละ slice จนกว่า error budget จะเต็ม และ budget ที่เหลือจะถูกนำไปรวมกับ budget ของ slice ถัดไป
+ถัดมา เราจะกำหนด problem เดิมพร้อมข้อจำกัดขนาด output observable เหมือนเดิม แต่คราวนี้เราจะจัดสรร error budget ให้แต่ละ slice โดยใช้ฟังก์ชัน [setup_budet](https://qiskit.github.io/qiskit-addon-obp/stubs/qiskit_addon_obp.utils.truncating.setup_budget.html) Pauli term ที่มีสัมประสิทธิ์ขนาดเล็กจะถูกตัดออกจากแต่ละ slice จนกว่า error budget จะเต็ม และ budget ที่เหลือจะถูกนำไปรวมกับ budget ของ slice ถัดไป
 
 เพื่อเปิดใช้งานการตัดแบบนี้ เราต้องตั้งค่า error budget ดังนี้:
 
@@ -213,7 +213,7 @@ from qiskit_addon_obp.utils.truncating import setup_budget
 truncation_error_budget = setup_budget(max_error_per_slice=0.005)
 ```
 
-สังเกตว่าการจัดสรร `5e-3` error ต่อ slice สำหรับการตัด ทำให้เราลบ slice ออกจาก Circuit ได้อีก 3 slice ขณะที่ยังอยู่ภายใน budget เดิมที่ 8 commuting Pauli group ใน observable โดยค่าเริ่มต้น `backpropagate` จะใช้ L1 norm ของสัมประสิทธิ์ที่ถูกตัดเพื่อควบคุม total error ที่เกิดจากการตัด สำหรับตัวเลือกอื่นดูได้ที่ [how-to guide on specifying the p_norm](https://qiskit.github.io/qiskit-addon-obp/how_tos/bound_error_using_p_norm.html)
+สังเกตว่าการจัดสรร `5e-3` error ต่อ slice สำหรับการตัด ทำให้เราลบ slice ออกจาก Circuit ได้อีก 3 slice ขณะที่ยังอยู่ภายใน budget เดิมที่ 8 commuting Pauli group ใน observable โดยค่าเริ่มต้น `backpropagate` จะใช้ L1 norm ของสัมประสิทธิ์ที่ถูกตัดเพื่อจำกัดขอบเขต (bound) ของ total error ที่เกิดจากการตัด สำหรับตัวเลือกอื่นดูได้ที่ [how-to guide on specifying the p_norm](https://qiskit.github.io/qiskit-addon-obp/how_tos/bound_error_using_p_norm.html)
 
 ในตัวอย่างนี้ที่เรา backpropagate 10 slice total truncation error ไม่ควรเกิน ``(5e-3 error/slice) * (10 slices) = 5e-2``
 สำหรับการอภิปรายเพิ่มเติมเกี่ยวกับการกระจาย error budget ไปยัง slice ต่างๆ ดูได้ที่ [how-to guide นี้](https://qiskit.github.io/qiskit-addon-obp/how_tos/truncate_operator_terms.html)
@@ -279,7 +279,7 @@ bp_obs_trunc_isa = bp_obs_trunc.apply_layout(bp_circuit_trunc_isa.layout)
 
 ### คำนวณค่าความคาดหวัง (expectation value) \{#calculate-expectation-value}
 
-สุดท้าย เราสามารถรัน experiment ที่ backpropagate แล้วและเปรียบเทียบกับ experiment แบบเต็มโดยใช้ [StatevectorEstimator](https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator) ที่ไม่มี noise จะเห็นว่าค่าความคาดหวัง (expectation value) ที่ได้จาก backpropagation โดยไม่มีการตัดนั้นเทียบเท่ากับค่าที่แน่นอนภายในขีดจำกัดของความแม่นยำเชิงตัวเลข
+สุดท้าย เราสามารถรัน experiment ที่ backpropagate แล้วและเปรียบเทียบกับ experiment แบบเต็มโดยใช้ [StatevectorEstimator](https://quantum.cloud.ibm.com/docs/api/qiskit/qiskit.primitives.StatevectorEstimator) ที่ไม่มี noise จะเห็นว่าค่าความคาดหวัง (expectation value) ที่ได้จาก backpropagation โดยไม่มีการตัดนั้นเทียบเท่ากับค่าที่แม่นตรง (exact value) ภายในขีดจำกัดของความแม่นยำเชิงตัวเลข
 
 ค่าความคาดหวัง (expectation value) บน operator ที่มีการตัดพจน์ออกมีความผิดพลาดในระดับ ``1e-4`` ซึ่งอยู่ภายใน tolerance ที่คาดไว้
 
