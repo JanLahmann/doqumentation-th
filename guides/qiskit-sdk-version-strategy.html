@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.9d9fafaf.js" defer="defer"></script>
-<script src="/assets/js/main.3d7ab18c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.235663c3.js" defer="defer"></script>
+<script src="/assets/js/main.a9ec6d1b.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -61,9 +61,9 @@ API เฉพาะบางอย่าง ในกรณีดังกล่
 ว่ายังไม่ถือว่าเป็น stable interfaces และจะมีการแสดงคำเตือนที่ผู้ใช้มองเห็น
 อยู่เสมอเมื่อใช้งาน unstable interfaces เหล่านี้ นอกจากนี้ ในบางกรณี
 interface ที่ถูกทำเครื่องหมายว่า private ถือเป็นส่วนหนึ่งของ public
-API โดยทั่วไปเกิดขึ้นในสองกรณีเท่านั้น: ทั้งการกำหนด abstract interface
+API โดยทั่วไปเกิดขึ้นในสองกรณีเท่านั้น: กรณีแรกคือการกำหนด abstract interface
 ที่ subclasses ตั้งใจจะ override/implement private method
-เป็นส่วนหนึ่งของการกำหนด implementation ของ interface, หรือเมธอด
+เป็นส่วนหนึ่งของการกำหนด implementation ของ interface และกรณีที่สองคือเมธอด
 low-level สำหรับการใช้งานขั้นสูงที่มี stable interfaces แต่ไม่ถือว่าปลอดภัยสำหรับใช้งาน
 เพราะผู้ใช้ต้องรับผิดชอบ class/safety invariants เอง
 (ตัวอย่าง canonical คือเมธอด <code>QuantumCircuit._append</code>)</p>
@@ -74,7 +74,7 @@ supported versions ของ dependencies) ที่ Qiskit ใช้ไม่�
 version releases เท่านั้นที่จะยกระดับ minimum requirements สำหรับการใช้หรือ build Qiskit
 (รวมถึงการเพิ่ม dependencies ใหม่) แต่ patch fixes อาจรวมการสนับสนุน
 Python versions ใหม่หรือ dependencies อื่น ๆ โดยปกติ minimum version ของ
-dependency จะเพิ่มขึ้นเมื่อ dependency versions เก่าไม่ได้รับการสนับสนุนแล้ว หรือ
+dependency จะเพิ่มขึ้นก็ต่อเมื่อ dependency versions เก่าไม่ได้รับการสนับสนุนแล้ว หรือ
 เมื่อไม่สามารถรักษาความเข้ากันได้กับทั้ง release ล่าสุดของ dependency และ version เก่าในเวลาเดียวกัน</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="upgrade-strategy">กลยุทธ์การอัปเกรด<a href="#upgrade-strategy" class="hash-link" aria-label="ลิงก์ตรงไปยัง กลยุทธ์การอัปเกรด" title="ลิงก์ตรงไปยัง กลยุทธ์การอัปเกรด" translate="no">​</a></h2>
 <p>เมื่อ release major version ใหม่ เส้นทางการอัปเกรดที่แนะนำ
@@ -114,7 +114,7 @@ series นั้น) พารามิเตอร์ <code>qiskit.qpy.dump(...
 จะไม่มีการรับประกันเหมือนกับ <code>rc</code> release และเป็นเพียง
 preview release เท่านั้น API อาจเปลี่ยนแปลงระหว่าง pre-releases เหล่านี้
 และ final release ที่มีหมายเลขเวอร์ชันนั้น ตัวอย่างเช่น <code>X.0.0pre1</code> อาจมี
-final API ที่แตกต่างจาก <code>X.0.0</code></p>
+API ที่แตกต่างจาก <code>X.0.0</code> ตัวจริง (final)</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="post-releases">Post-releases<a href="#post-releases" class="hash-link" aria-label="ลิงก์ตรงไปยัง Post-releases" title="ลิงก์ตรงไปยัง Post-releases" translate="no">​</a></h2>
 <p>หากมีปัญหากับ packaging ของ release อาจมีการออก post-release
 เพื่อแก้ไข เหล่านี้จะอยู่ในรูปแบบ <code>X.Y.Z.1</code> โดยที่เลขที่สี่
