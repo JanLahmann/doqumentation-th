@@ -16,8 +16,8 @@
 <script src="/runtime-config.js"></script>
 <script src="/umami-before-send.js"></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org,de.doqumentation.org,es.doqumentation.org,uk.doqumentation.org,fr.doqumentation.org,it.doqumentation.org,pt.doqumentation.org,ja.doqumentation.org,tl.doqumentation.org,ar.doqumentation.org,he.doqumentation.org,ms.doqumentation.org,id.doqumentation.org,th.doqumentation.org,ko.doqumentation.org,pl.doqumentation.org,ro.doqumentation.org,cs.doqumentation.org" data-before-send="fwqUmamiBeforeSend"></script><link rel="stylesheet" href="/assets/css/styles.acac9001.css">
-<script src="/assets/js/runtime~main.504fb2cf.js" defer="defer"></script>
-<script src="/assets/js/main.442737fe.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.805fa151.js" defer="defer"></script>
+<script src="/assets/js/main.583b6339.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -35,10 +35,10 @@
 <p><a href="https://docs.quantum.ibm.com/addons/qiskit-noise-learning" target="_blank" rel="noopener noreferrer" class=""><code>qiskit-noise-learning</code></a> เป็นชุดเครื่องมือสำหรับการระบุลักษณะ quantum noise โดยใช้การสุ่ม คุณสามารถใช้สร้างการทดลอง noise-learning แบบกำหนดเอง ตรวจสอบความถูกต้องด้วยการจำลองในเครื่อง และวิเคราะห์ผลลัพธ์ดิบ</p>
 </li>
 <li class="">
-<p><a href="https://docs.quantum.ibm.com/addons/qiskit-mitigation" target="_blank" rel="noopener noreferrer" class=""><code>qiskit-mitigation</code></a> เป็นแพ็กเกจของวิธี quantum error mitigation สำหรับสร้าง mitigation pipeline ด้วย execution model ใหม่ ประกอบด้วยการนำวิธีที่เป็นที่รู้จักมาใช้งาน ได้แก่ PEC, PEA, TREX และ ZNE แบบ gate-folding รวมถึง post-selection สำหรับกรองข้อผิดพลาดแบบ non-Markovian ออก</p>
+<p><a href="https://docs.quantum.ibm.com/addons/qiskit-mitigation" target="_blank" rel="noopener noreferrer" class=""><code>qiskit-mitigation</code></a> เป็นแพ็กเกจของวิธีการบรรเทาข้อผิดพลาดเชิงควอนตัมสำหรับสร้าง mitigation pipeline ด้วย execution model ใหม่ ประกอบด้วย implementation ของวิธีที่เป็นที่รู้จัก ได้แก่ PEC, PEA, TREX และ ZNE แบบ gate-folding รวมถึง post-selection สำหรับกรองข้อผิดพลาดแบบ non-Markovian ออก</p>
 </li>
 <li class="">
-<p><a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/release-notes#0500-2026-09-24" target="_blank" rel="noopener noreferrer" class=""><code>qiskit-ibm-runtime</code> v0.50.0</a> เปิดตัว <strong>การนำ primitive Sampler และ Estimator ฝั่งไคลเอนต์แบบใหม่มาใช้งาน</strong> ซึ่งสร้างบนเฟรมเวิร์กนี้ การนำมาใช้งานเหล่านี้ช่วยให้คุณตรวจสอบได้ว่าแต่ละวิธี error mitigation ถูกนำมาใช้อย่างไร และทดสอบ<a class="" href="/guides/local-testing-mode">ในเครื่อง</a>ก่อนรันบน QPU จริง</p>
+<p><a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/release-notes#0500-2026-09-24" target="_blank" rel="noopener noreferrer" class=""><code>qiskit-ibm-runtime</code> v0.50.0</a> เปิดตัว <strong>implementation ฝั่งไคลเอนต์แบบใหม่ของ primitive Sampler และ Estimator</strong> ซึ่งสร้างบนเฟรมเวิร์กนี้ implementation เหล่านี้ช่วยให้คุณตรวจสอบได้อย่างละเอียดว่าแต่ละวิธีการบรรเทาข้อผิดพลาดถูก implement อย่างไร และทดสอบ<a class="" href="/guides/local-testing-mode">ในเครื่อง</a>ก่อนรันบน QPU จริง</p>
 <p><strong>วิธีอัปเกรดไปใช้ primitive ใหม่:</strong> การอัปเกรดไปใช้ primitive ใหม่ถูกออกแบบให้ทำได้ง่าย ในกรณีส่วนใหญ่คุณเพียงเปลี่ยนคำสั่ง import — ไม่ต้องแก้เนื้อหาโค้ด ดู<a class="" href="/guides/migrate-to-client-side-primitives">คู่มือการย้าย</a>สำหรับรายละเอียดทั้งหมด</p>
 </li>
 <li class="">

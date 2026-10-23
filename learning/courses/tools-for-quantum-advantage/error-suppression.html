@@ -16,8 +16,8 @@
 <script src="/runtime-config.js"></script>
 <script src="/umami-before-send.js"></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org,de.doqumentation.org,es.doqumentation.org,uk.doqumentation.org,fr.doqumentation.org,it.doqumentation.org,pt.doqumentation.org,ja.doqumentation.org,tl.doqumentation.org,ar.doqumentation.org,he.doqumentation.org,ms.doqumentation.org,id.doqumentation.org,th.doqumentation.org,ko.doqumentation.org,pl.doqumentation.org,ro.doqumentation.org,cs.doqumentation.org" data-before-send="fwqUmamiBeforeSend"></script><link rel="stylesheet" href="/assets/css/styles.acac9001.css">
-<script src="/assets/js/runtime~main.504fb2cf.js" defer="defer"></script>
-<script src="/assets/js/main.442737fe.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.805fa151.js" defer="defer"></script>
+<script src="/assets/js/main.583b6339.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -27,7 +27,7 @@
 <!-- -->
 <header><h1 id="error-suppression-and-tailoring">การระงับและปรับแต่งข้อผิดพลาด</h1></header>
 <p>การระงับข้อผิดพลาด (error suppression) สามารถหมายถึงเทคนิคใด ๆ ที่คาดการณ์ล่วงหน้าและพยายามหลีกเลี่ยงสัญญาณรบกวนและข้อผิดพลาดบางประเภท วิธีที่ง่ายที่สุดในการอธิบายเรื่องนี้คือผ่านตัวอย่างที่เป็นรูปธรรม แต่โปรดจำไว้ว่าวิธีการเหล่านี้ไม่ได้จำกัดอยู่แค่ตัวอย่างที่แสดงในที่นี้เท่านั้น และมีการสำรวจวิธีการใหม่ ๆ อย่างต่อเนื่อง บางครั้งการระงับข้อผิดพลาดเป็นไปไม่ได้ แต่สามารถส่งผลต่อวิธีที่ข้อผิดพลาดสะสมได้ หากเราสามารถทำให้ข้อผิดพลาดสะสมช้าลงได้ เราอาจอธิบายว่านี่คือการระงับข้อผิดพลาดโดยรวม แต่จริง ๆ แล้วควรมองว่าเป็นการปรับแต่งสัญญาณรบกวน (noise tailoring) มากกว่า ในบทเรียนนี้เราจะครอบคลุมตัวอย่างมาตรฐานของการระงับข้อผิดพลาด (dynamical decoupling) และการปรับแต่ง/กำหนดรูปสัญญาณรบกวน (Pauli twirling)</p>
-<p>วิดีโอนี้ให้ภาพรวมของการ suppress error รวมถึงแอนิเมชันที่มีประโยชน์สำหรับทำความเข้าใจว่ามันทำงานอย่างไร ข้อความด้านล่างเพิ่มรายละเอียดและสำรวจการ suppress error บางประเภทโดยใช้ Qiskit</p>
+<p>วิดีโอนี้ให้ภาพรวมของการระงับข้อผิดพลาด รวมถึงแอนิเมชันที่มีประโยชน์ซึ่งช่วยให้เห็นภาพว่าเทคนิคเหล่านี้ทำงานอย่างไร ข้อความด้านล่างจะลงรายละเอียดเพิ่มเติมและสำรวจการระงับข้อผิดพลาดบางประเภทโดยใช้ Qiskit</p>
 <!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="dynamical-decoupling">Dynamical decoupling<a href="#dynamical-decoupling" class="hash-link" aria-label="ลิงก์ตรงไปยัง Dynamical decoupling" title="ลิงก์ตรงไปยัง Dynamical decoupling" translate="no">​</a></h2>
 <p>เริ่มต้นด้วยสถานะที่ง่ายมากบน qubit เดี่ยว และแนะนำโมเดลสัญญาณรบกวนอย่างง่าย สิ่งนี้ยังไม่เพียงพอที่จะอธิบาย dynamical decoupling ได้อย่างสมบูรณ์ แต่ก็ให้ตัวอย่างที่ชัดเจนแก่เรา สมมติว่าเรามี qubit ที่ถูกเตรียมในสถานะ superposition โดยใช้ Hadamard gate:</p>
