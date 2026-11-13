@@ -16,8 +16,8 @@
 <script src="/runtime-config.js"></script>
 <script src="/umami-before-send.js"></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org,de.doqumentation.org,es.doqumentation.org,uk.doqumentation.org,fr.doqumentation.org,it.doqumentation.org,pt.doqumentation.org,ja.doqumentation.org,tl.doqumentation.org,ar.doqumentation.org,he.doqumentation.org,ms.doqumentation.org,id.doqumentation.org,th.doqumentation.org,ko.doqumentation.org,pl.doqumentation.org,ro.doqumentation.org,cs.doqumentation.org" data-before-send="fwqUmamiBeforeSend"></script><link rel="stylesheet" href="/assets/css/styles.082ca4e0.css">
-<script src="/assets/js/runtime~main.dfdaf99b.js" defer="defer"></script>
-<script src="/assets/js/main.0ecf55ad.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6ec9dc23.js" defer="defer"></script>
+<script src="/assets/js/main.ca1a902f.js" defer="defer"></script>
 <meta data-dq-mirror-noindex name="robots" content="noindex, follow" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -32,7 +32,7 @@
 <p>Quantum Portfolio Optimizer คือ Qiskit Function ที่ออกแบบมาเพื่อแก้ปัญหา dynamic portfolio optimization ซึ่งเป็นปัญหาพื้นฐานในด้านการเงินที่มุ่งปรับสัดส่วนการลงทุนเป็นระยะ ๆ ในสินทรัพย์หลายประเภท เพื่อเพิ่มผลตอบแทนและลดความเสี่ยง ด้วยการใช้เทคนิค quantum optimization ล้ำสมัย ฟังก์ชันนี้ทำให้กระบวนการง่ายขึ้น ผู้ใช้ที่ไม่มีความเชี่ยวชาญด้าน quantum computing ก็สามารถได้รับประโยชน์จากมันในการหา investment trajectory ที่ดีที่สุด เหมาะสำหรับผู้จัดการพอร์ตโฟลิโอ นักวิจัยด้าน quantitative finance และนักลงทุนทั่วไป เครื่องมือนี้รองรับการ back-testing กลยุทธ์การซื้อขายในการ optimize พอร์ตโฟลิโอ</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="function-description">คำอธิบายฟังก์ชัน<a href="#function-description" class="hash-link" aria-label="ลิงก์ตรงไปยัง คำอธิบายฟังก์ชัน" title="ลิงก์ตรงไปยัง คำอธิบายฟังก์ชัน" translate="no">​</a></h2>
 <p>Quantum Portfolio Optimizer ใช้อัลกอริทึม Variational Quantum Eigensolver (VQE) เพื่อแก้ปัญหา Quadratic Unconstrained Binary Optimization (QUBO) สำหรับ dynamic portfolio optimization ผู้ใช้เพียงแค่ระบุข้อมูลราคาสินทรัพย์และกำหนดเงื่อนไขการลงทุน จากนั้นฟังก์ชันจะรันกระบวนการ quantum optimization และคืนค่าชุด investment trajectory ที่ optimize แล้ว</p>
-<p>The process consists of four main stages. First, the input data is mapped to a quantum-compatible problem, constructing the QUBO of the dynamic portfolio optimization problem, and transforming it into a quantum operator (Ising Hamiltonian). Next, the input problem and the VQE algorithm are adapted to be run in the quantum hardware. The VQE algorithm is then run on the quantum hardware, and finally, the results are post-processed to provide the optimal investment trajectories. The system also includes a noise-aware (<a class="" href="/addons/qiskit-addon-sqd">SQD</a>-based) post-processing to maximize the quality of the output.</p>
+<p>กระบวนการประกอบด้วยสี่ขั้นตอนหลัก ขั้นแรก ข้อมูล input จะถูก map ไปยังปัญหาที่ compatible กับ quantum โดยสร้าง QUBO ของ dynamic portfolio optimization และแปลงเป็น quantum operator (Ising Hamiltonian) ต่อมา ปัญหา input และอัลกอริทึม VQE จะถูกปรับแต่งเพื่อรันบน quantum hardware จากนั้นรัน VQE บน quantum hardware และสุดท้ายผลลัพธ์จะถูก post-process เพื่อให้ได้ investment trajectory ที่ดีที่สุด ระบบยังมี noise-aware (<a class="" href="/addons/qiskit-addon-sqd">SQD</a>-based) post-processing เพื่อเพิ่มคุณภาพของ output ด้วย</p>
 <p>Qiskit Function นี้อ้างอิงจาก <a href="https://arxiv.org/abs/2412.19150" target="_blank" rel="noopener noreferrer" class="">บทความที่ตีพิมพ์</a> โดย Global Data Quantum
 <img decoding="async" loading="lazy" alt="การแสดงภาพเวิร์กโฟลว์ของฟังก์ชัน" src="/assets/images/function_workflow-c87c42714c3fd188911c7aa56d50493c.svg" width="855" height="1290" class="img_ev3q"></p>
 <h1 id="get-started">เริ่มต้นใช้งาน</h1>

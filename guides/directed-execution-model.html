@@ -16,8 +16,8 @@
 <script src="/runtime-config.js"></script>
 <script src="/umami-before-send.js"></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org,de.doqumentation.org,es.doqumentation.org,uk.doqumentation.org,fr.doqumentation.org,it.doqumentation.org,pt.doqumentation.org,ja.doqumentation.org,tl.doqumentation.org,ar.doqumentation.org,he.doqumentation.org,ms.doqumentation.org,id.doqumentation.org,th.doqumentation.org,ko.doqumentation.org,pl.doqumentation.org,ro.doqumentation.org,cs.doqumentation.org" data-before-send="fwqUmamiBeforeSend"></script><link rel="stylesheet" href="/assets/css/styles.082ca4e0.css">
-<script src="/assets/js/runtime~main.dfdaf99b.js" defer="defer"></script>
-<script src="/assets/js/main.0ecf55ad.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6ec9dc23.js" defer="defer"></script>
+<script src="/assets/js/main.ca1a902f.js" defer="defer"></script>
 <meta data-dq-mirror-noindex name="robots" content="noindex, follow" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -55,7 +55,7 @@
 <p><img decoding="async" loading="lazy" alt="ตัวอย่างการใช้ box และ twirling annotation" src="/assets/images/execution-model-3f6abccbb019cdb57baf809a7c1ce82a.avif" width="1024" height="338" class="img_ev3q"></p>
 <p>Circuit ที่มี annotated box สามารถนำมาสร้าง <em>template circuit</em> และ <em>samplex</em> ได้ template circuit ที่ได้คือ parameterized circuit ที่จะถูกรันโดยไม่มีการเปลี่ยนแปลงเพิ่มเติม (นอกจากการกำหนดค่า parameter ต่างกัน) samplex ซึ่งเป็น core type ของ library Samplomatic แทน probability distribution แบบ parametric บน parameter ของ template circuit และฟิลด์ที่มีค่า array ฟิลด์เหล่านี้สามารถใช้ post-process ข้อมูลที่รวบรวมจากการรัน bound template circuit กล่าวอีกนัยหนึ่ง template circuit และ samplex ร่วมกันบอก <a href="#executor" class="">Executor primitive</a> ว่าจะสร้าง parameter อะไรและรัน bound circuit ใด เนื่องจาก construct สองอย่างนี้ถูกสร้างฝั่ง client จึงสามารถตรวจสอบและสุ่มตัวอย่างในเครื่องเพื่อยืนยัน output ก่อนส่งไปรันบน hardware</p>
 <p>เพื่อให้กระบวนการสร้าง annotated box ง่ายขึ้น library Samplomatic ยังมี transpiler pass ที่จัดกลุ่มคำสั่ง Circuit เป็น annotated box โดยอัตโนมัติ ตามกลยุทธ์ที่กำหนด</p>
-<p>To learn more about Samplomatic, visit the <a class="" href="/addons/samplomatic">guides</a> and <a class="" href="/addons/samplomatic">API reference</a> documentation. Feel free to submit feedback and report bugs in its <a href="https://github.com/Qiskit/samplomatic" target="_blank" rel="noopener noreferrer" class="">GitHub</a> repository.</p>
+<p>หากต้องการเรียนรู้เพิ่มเติมเกี่ยวกับ Samplomatic ดูเอกสาร <a class="" href="/addons/samplomatic">guides</a> และ <a class="" href="/addons/samplomatic">API reference</a> สามารถส่งข้อเสนอแนะและรายงาน bug ใน repository <a href="https://github.com/Qiskit/samplomatic" target="_blank" rel="noopener noreferrer" class="">GitHub</a> ได้</p>
 <span class="anchorTargetStickyNavbar_Vzrq" id="executor"></span>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="executor-primitive">Executor primitive<a href="#executor-primitive" class="hash-link" aria-label="ลิงก์ตรงไปยัง Executor primitive" title="ลิงก์ตรงไปยัง Executor primitive" translate="no">​</a></h3>
 <p>Executor คือ IBM Quantum primitive ใหม่ที่รับคู่ (template circuit, samplex) เป็น input สร้างและผูกค่า parameter ตาม samplex รัน bound circuit บน hardware และคืนผลลัพธ์การรันและ metadata โดยปฏิบัติตามคำสั่งของคู่ input และไม่ตัดสินใจโดยนัยแทนผู้ใช้ เพื่อให้กระบวนการโปร่งใสแต่มีประสิทธิภาพ</p>
